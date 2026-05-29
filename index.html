@@ -9,55 +9,100 @@ content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-/* إصلاح مشاكل الجوال */
-html, body{
-    overflow-x: hidden;
-    width: 100%;
+/* =========================
+   تحسين الجوال لكل الشرائح
+========================= */
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
 }
 
-/* الحاويات */
-.container,
+/* جميع الحاويات */
+.slide-container,
+.content-area,
+.portfolio-grid,
 .section,
-.cards{
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+.cards,
+.container{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
 }
 
 /* البطاقات */
-.card{
-    width: 100%;
-    max-width: 320px;
-    margin: auto;
+.card,
+.box{
+    width:100%;
+    max-width:100%;
+    margin:auto;
 }
 
-/* العناوين الكبيرة */
-h1, .title, .big-title{
-    font-size: clamp(28px, 8vw, 70px);
-    line-height: 1.2;
+/* الصور */
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
 }
 
-/* للجوال */
+/* العناوين */
+h1,h2,h3{
+    word-wrap:break-word;
+}
+
+/* تنسيق الجوال */
 @media (max-width:768px){
 
+    /* جميع الشبكات Grid */
+    .portfolio-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    /* جميع الصفوف */
+    .section,
     .cards,
-    .section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .content-area{
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        gap:20px;
     }
 
-    .card{
-        width: 95%;
+    /* البطاقات */
+    .card,
+    .box{
+        width:95% !important;
     }
 
-    img{
-        max-width: 100%;
-        height: auto;
+    /* العناوين */
+    h1{
+        font-size:38px !important;
+        text-align:center;
+    }
+
+    h2{
+        font-size:30px !important;
+        text-align:center;
+    }
+
+    h3{
+        font-size:22px !important;
+    }
+
+    /* النصوص */
+    p,span{
+        font-size:15px !important;
+        line-height:1.8;
+    }
+
+    /* إلغاء التموضع الثابت */
+    *{
+        left:auto !important;
+        right:auto !important;
     }
 
 }
+
         * { box-sizing: border-box; scroll-behavior: smooth; }
         body { background-color: #f1f5f9; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
 
