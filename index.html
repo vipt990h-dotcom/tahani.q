@@ -9,104 +9,80 @@ content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-/* =========================
-   تحسين الجوال لكل الشرائح
-========================= */
-
-html,body{
-    width:100%;
-    overflow-x:hidden;
-}
-
-/* جميع الحاويات */
-.slide-container,
-.content-area,
-.portfolio-grid,
-.section,
-.cards,
-.container{
-    width:100%;
-    max-width:100%;
-    box-sizing:border-box;
-}
-
-/* البطاقات */
-.card,
-.box{
-    width:100%;
-    max-width:100%;
-    margin:auto;
-}
-
-/* الصور */
-img{
-    max-width:100%;
-    height:auto;
-    display:block;
-}
-
-/* العناوين */
-h1,h2,h3{
-    word-wrap:break-word;
-}
-
-/* تنسيق الجوال */
-@media (max-width:768px){
-
-    /* جميع الشبكات Grid */
-    .portfolio-grid{
-        grid-template-columns:1fr !important;
+/* ============================================== */
+/* 📱 كود الإصلاح والتحجيم التلقائي الكامل لمقاس الجوال 📱 */
+/* ============================================== */
+@media screen and (max-width: 768px) {
+    /* منع تداخل النصوص وجعل الكلمات تنساب بشكل طبيعي ومريح للعين */
+    body, p, h1, h2, h3, li, span, div {
+        word-break: keep-all !important;
+        word-wrap: normal !important;
+        white-space: normal !important;
+    }
+    
+    /* ضبط الحاويات والشاشات لتترتب عمودياً وتأخذ المقاس الكامل للجوال */
+    .slides-wrapper { 
+        height: auto !important; 
+        overflow-y: visible !important; 
+        scroll-snap-type: none !important; 
+    }
+    
+    .slide-container { 
+        padding: 40px 20px 90px 20px !important; 
+        height: auto !important; 
+        min-height: 100vh !important; 
+        scroll-snap-align: none !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
     }
 
-    /* جميع الصفوف */
-    .section,
-    .cards,
-    .content-area{
-        display:flex !important;
-        flex-direction:column !important;
-        align-items:center !important;
-        gap:20px;
+    /* تحجيم العناوين والخطوط لتتسع داخل الشاشة الصغيرة بدون قص */
+    h1 { font-size: 32px !important; text-align: center !important; }
+    h2, .slide-title { font-size: 24px !important; line-height: 1.4 !important; border-right-width: 4px !important; padding-right: 10px !important; }
+    .subtitle { font-size: 16px !important; text-align: center !important; }
+    p, li { font-size: 15px !important; line-height: 1.6 !important; text-align: justify !important; }
+
+    /* تحويل الهياكل الشبكية (الجريد) إلى عمود واحد متناسق */
+    .two-column, .portfolio-grid, .comment-section { 
+        grid-template-columns: 1fr !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important; 
+    }
+    
+    /* ضبط أبعاد وحجم الصور المرفقة داخل الجوال */
+    .image-wrapper { 
+        height: 240px !important; 
+        width: 100% !important; 
+    }
+    .image-wrapper img { 
+        object-fit: cover !important; 
     }
 
-    /* البطاقات */
-    .card,
-    .box{
-        width:95% !important;
+    /* إعادة تموضع شريط الأزرار السفلي بشكل أفقي مريح ليد تصفح الجوال */
+    .nav-controls {
+        position: fixed !important; 
+        bottom: 15px !important; 
+        top: auto !important; 
+        left: 50% !important; 
+        transform: translateX(-50%) !important;
+        flex-direction: row !important; 
+        gap: 6px !important; 
+        width: 92% !important; 
+        justify-content: center !important;
+        background: rgba(28, 37, 65, 0.95) !important; 
+        padding: 8px !important; 
+        border-radius: 30px !important;
+        border: 1px solid rgba(245, 158, 11, 0.3) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
     }
-
-    /* العناوين */
-    h1{
-        font-size:38px !important;
-        text-align:center;
+    .nav-btn { 
+        width: 30px !important; 
+        height: 30px !important; 
+        font-size: 11px !important; 
     }
-
-    h2{
-        font-size:30px !important;
-        text-align:center;
-    }
-
-    h3{
-        font-size:22px !important;
-    }
-
-    /* النصوص */
-    p,span{
-        font-size:15px !important;
-        line-height:1.8;
-    }
-
-    /* إلغاء التموضع الثابت */
-    *{
-        left:auto !important;
-        right:auto !important;
-    }
-
-}
-
-        * { box-sizing: border-box; scroll-behavior: smooth; }
-        body { background-color: #f1f5f9; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-
-        /* جعل الصفحة عبارة عن شرائح متتالية واقفة تلقائياً */
+}        /* جعل الصفحة عبارة عن شرائح متتالية واقفة تلقائياً */
         .slides-wrapper {
             width: 100%;
             height: 100vh;
