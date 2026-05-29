@@ -209,7 +209,33 @@ content="width=device-width, initial-scale=1.0">
         .user-comment .meta { font-size: 14px; color: #f59e0b; font-weight: bold; display: flex; justify-content: space-between; }
 
         .title-slide-bg { background-image: linear-gradient(rgba(11, 19, 41, 0.85), rgba(11, 19, 41, 0.85)), url('http://googleusercontent.com/image_collection/image_retrieval/10451511274384952075'); background-size: cover; background-position: center; }
-    </style>
+   /* 📱 تعديل مقاس الشريحة الثالثة (slide-credentials) فقط لتناسب الجوال 📱 */
+@media screen and (max-width: 768px) {
+    #slide-credentials .portfolio-grid, 
+    #slide-credentials [class*="grid"], 
+    #slide-credentials [style*="grid"] { 
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+    #slide-credentials .card, 
+    #slide-credentials [class*="card"] {
+        height: auto !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+    #slide-credentials .card img, 
+    #slide-credentials [class*="card"] img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 230px !important;
+        object-fit: contain !important;
+        border-radius: 8px !important;
+    }
+}
+</style>
 </head>
 <body>
 
@@ -719,7 +745,7 @@ content="width=device-width, initial-scale=1.0">
             </p>
             <div style="display: flex; justify-content: center; margin-top: 20px;">
                 <!-- 💡 تنبيه: استبدلي رقم الـ966500990456برقم واتسابكِ الحقيقي دون أصفار أو علامة + -->
-                <a href="https://api.whatsapp.com/send?phone=966500000000&text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A3.%20%D8%AA%D9%87%D8%A7%D9%86%D9%8A%D8%8C%20%D8%A7%D8%B7%D9%84%D8%B9%D8%AA%20%D8%B9%D9%84%D9%8A%20%D9%85%D8%AD%D9%8if%D8%B8%D8%AA%D9%83%D9%8A%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8a%D8%A9%20%D9%88%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%D9%8A%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20..." 
+                <a href="https://api.whatsapp.com/send?phone=966500990456&text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A3.%20%D8%AA%D9%87%D8%A7%D9%86%D9%8A%D8%8C%20%D8%A7%D8%B7%D9%84%D8%B9%D8%AA%20%D8%B9%D9%84%D9%8A%20%D9%85%D8%AD%D9%8if%D8%B8%D8%AA%D9%83%D9%8A%20%D8%A7%D9%84%D8%B1%D9%82%D9%85%D9%8a%D8%A9%20%D9%88%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%D9%8A%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20..." 
                    target="_blank" class="btn-action" style="background-color: #25D366; color: white; padding: 15px 40px; font-size: 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;">
                     <i class="fa-brands fa-whatsapp" style="font-size: 26px;"></i> تواصل معي عبر الواتساب
                 </a>
