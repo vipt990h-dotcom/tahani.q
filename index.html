@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-<meta name="viewport" 
-content="width=device-width, initial-scale=1.0">
-    <title>المحفظة الرقمية الاحترافية - أ. تهاني</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>محفظة الأثر المهني | أ. تهاني القرشي</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<style>
 /* 📱 كود الإصلاح الشامل لمقاس الجوال وصفحة الاعتمادات 📱 */
 @media screen and (max-width: 768px) {
     /* يمنع ظهور الحروف تحت بعضها ويجعل الكلمات تنساب بشكل طبيعي */
@@ -80,7 +81,7 @@ content="width=device-width, initial-scale=1.0">
         /* جعل الصفحة عبارة عن شرائح متتالية واقفة تلقائياً */
         .slides-wrapper {
             width: 100%;
-            height: 100vh;
+            height:auto;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
         }
@@ -91,7 +92,7 @@ content="width=device-width, initial-scale=1.0">
             background-color: #0b1329; /* كحلي فاخر */
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            height:auto;
             justify-content: center;
             padding: 60px 100px;
             position: relative;
@@ -248,542 +249,1966 @@ content="width=device-width, initial-scale=1.0">
         margin-top: 10px !important;
     }
 }
+
+/* =========================================================
+   الهوية الجديدة الكاملة: محفظة الأثر المهني
+   ألوان هادئة ومؤسسية مناسبة لجميع القطاعات
+   ========================================================= */
+:root{
+    --impact-cream:#FAF8F3;
+    --impact-soft:#F3F7F4;
+    --impact-mist:#EEF4F2;
+    --impact-navy:#102A43;
+    --impact-blue:#5B7083;
+    --impact-sage:#7A9D8C;
+    --impact-gold:#C8A96B;
+    --impact-white:#FFFFFF;
+    --impact-text:#334155;
+    --impact-muted:#66788A;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+    background:var(--impact-soft) !important;
+    color:var(--impact-text) !important;
+}
+
+.slides-wrapper{
+    background:linear-gradient(135deg,var(--impact-cream),var(--impact-soft)) !important;
+}
+
+/* كل الشرائح أصبحت بهوية فاتحة هادئة */
+.slide-container{
+    background:
+        radial-gradient(circle at 8% 12%, rgba(122,157,140,.13) 0%, transparent 32%),
+        radial-gradient(circle at 92% 88%, rgba(200,169,107,.14) 0%, transparent 34%),
+        linear-gradient(135deg,var(--impact-cream) 0%,var(--impact-soft) 55%,var(--impact-mist) 100%) !important;
+    color:var(--impact-text) !important;
+    overflow:hidden !important;
+}
+
+/* زخرفة موحدة خفيفة لكل صفحة */
+.slide-container::before{
+    background:
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 45%, transparent 75%),
+        radial-gradient(circle at top right, rgba(122,157,140,.10), transparent 42%),
+        radial-gradient(circle at bottom left, rgba(200,169,107,.10), transparent 42%) !important;
+    opacity:1 !important;
+}
+
+.slide-container::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border:2px solid rgba(122,157,140,.12);
+    border-radius:50%;
+    top:-180px;
+    left:-150px;
+    z-index:0;
+    pointer-events:none;
+}
+
+.slide-container > *{
+    position:relative;
+    z-index:1;
+}
+
+.title-slide-bg{
+    background:
+        radial-gradient(circle at 15% 20%, rgba(122,157,140,.15), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(200,169,107,.14), transparent 38%),
+        linear-gradient(135deg,var(--impact-cream),var(--impact-soft),var(--impact-mist)) !important;
+}
+
+/* العناوين */
+h1{
+    color:var(--impact-navy) !important;
+    text-shadow:none !important;
+}
+
+h2, .slide-title{
+    color:var(--impact-navy) !important;
+}
+
+h3{
+    color:var(--impact-sage) !important;
+}
+
+p, li{
+    color:var(--impact-text) !important;
+}
+
+.slide-title{
+    border-right:8px solid var(--impact-sage) !important;
+    background:rgba(255,255,255,.58);
+    border-radius:18px;
+    padding:18px 24px !important;
+    box-shadow:0 10px 30px rgba(16,42,67,.06);
+    margin-bottom:28px !important;
+}
+
+/* البطاقات والكروت */
+.card,
+[class*="card"],
+.badge,
+.comment-form,
+.comments-display,
+.user-comment{
+    background:rgba(255,255,255,.86) !important;
+    color:var(--impact-text) !important;
+    border:1px solid rgba(122,157,140,.18) !important;
+    border-bottom:4px solid var(--impact-sage) !important;
+    box-shadow:0 14px 35px rgba(16,42,67,.08) !important;
+    backdrop-filter:blur(8px);
+}
+
+.card:nth-child(even),
+[class*="card"]:nth-child(even){
+    border-bottom-color:var(--impact-gold) !important;
+}
+
+.card h3,
+[class*="card"] h3{
+    color:var(--impact-navy) !important;
+}
+
+.card p,
+[class*="card"] p,
+.card span,
+[class*="card"] span,
+.badge span,
+.badge p{
+    color:var(--impact-text) !important;
+}
+
+.card i,
+[class*="card"] i,
+.badge i{
+    color:var(--impact-sage) !important;
+}
+
+/* أزرار وروابط */
+.btn-action{
+    background:linear-gradient(135deg,var(--impact-sage),#8EAE9E) !important;
+    color:white !important;
+    border-radius:14px !important;
+    box-shadow:0 8px 20px rgba(122,157,140,.22) !important;
+}
+
+.btn-action:hover{
+    filter:brightness(.98);
+    transform:translateY(-1px);
+}
+
+/* الصور */
+.image-wrapper{
+    border:3px solid rgba(122,157,140,.18) !important;
+    box-shadow:0 14px 35px rgba(16,42,67,.08);
+    background:white;
+}
+
+.image-wrapper img{
+    filter:saturate(.95) contrast(.98);
+}
+
+/* شريط التنقل السفلي */
+.nav-controls{
+    background:rgba(255,255,255,.92) !important;
+    border:1px solid rgba(122,157,140,.25) !important;
+    box-shadow:0 12px 35px rgba(16,42,67,.12) !important;
+}
+
+.nav-btn{
+    background:var(--impact-soft) !important;
+    color:var(--impact-navy) !important;
+    border:1px solid rgba(122,157,140,.18);
+}
+
+.nav-btn:hover{
+    background:var(--impact-sage) !important;
+    color:white !important;
+}
+
+.nav-arrow{
+    color:var(--impact-sage) !important;
+}
+
+/* النماذج والتعليقات */
+.comment-form input,
+.comment-form textarea{
+    background:#fff !important;
+    color:var(--impact-navy) !important;
+    border:1px solid rgba(122,157,140,.28) !important;
+}
+
+.user-comment{
+    border-right:5px solid var(--impact-sage) !important;
+}
+
+.user-comment .meta{
+    color:var(--impact-gold) !important;
+}
+
+/* عناصر داخلية مكتوبة inline بكثرة: تحسين عام للألوان */
+[style*="background: #1c2541"],
+[style*="background:#1c2541"],
+[style*="background: rgba(16, 185, 129, 0.1)"],
+[style*="background:rgba(16, 185, 129, 0.1)"]{
+    background:rgba(255,255,255,.88) !important;
+    color:var(--impact-text) !important;
+    border:1px solid rgba(122,157,140,.18) !important;
+    box-shadow:0 12px 30px rgba(16,42,67,.07) !important;
+}
+
+[style*="background: rgba(0,0,0,0.2)"],
+[style*="background:rgba(0,0,0,0.2)"]{
+    background:rgba(122,157,140,.10) !important;
+}
+
+[style*="color: #ffffff"],
+[style*="color:#ffffff"],
+[style*="color: white"],
+[style*="color:white"]{
+    color:var(--impact-navy) !important;
+}
+
+[style*="color: #e2e8f0"],
+[style*="color:#e2e8f0"],
+[style*="color: #cbd5e1"],
+[style*="color:#cbd5e1"]{
+    color:var(--impact-text) !important;
+}
+
+[style*="color: #f59e0b"],
+[style*="color:#f59e0b"]{
+    color:var(--impact-gold) !important;
+}
+
+[style*="color: #10b981"],
+[style*="color:#10b981"]{
+    color:var(--impact-sage) !important;
+}
+
+[style*="border-bottom: 4px solid #10b981"],
+[style*="border-bottom:4px solid #10b981"]{
+    border-bottom-color:var(--impact-sage) !important;
+}
+
+[style*="border-bottom: 4px solid #f59e0b"],
+[style*="border-bottom:4px solid #f59e0b"]{
+    border-bottom-color:var(--impact-gold) !important;
+}
+
+/* تحسين صفحة الجوال */
+@media screen and (max-width:768px){
+    .slide-container{
+        padding:40px 18px 95px 18px !important;
+    }
+    h1{font-size:36px !important;}
+    .slide-title{
+        font-size:24px !important;
+        padding:14px 18px !important;
+    }
+}
+
+
+/* =========================================================
+   التعديل النهائي: إزالة الكحلي والرمادي الداكن من البطاقات
+   واعتماد هوية كريمي + أخضر ساج + ذهبي هادئ
+   ========================================================= */
+
+:root{
+    --final-cream:#FAF8F3;
+    --final-soft:#F6FAF7;
+    --final-white:#FFFFFF;
+    --final-sage:#7A9D8C;
+    --final-sage-light:#EAF3EE;
+    --final-gold:#C8A96B;
+    --final-gold-light:#FBF7EF;
+    --final-navy:#102A43;
+    --final-text:#334155;
+    --final-muted:#66788A;
+}
+
+/* منع الخلفيات الداكنة في أي بطاقة */
+.card,
+[class*="card"],
+.badge,
+.comment-form,
+.comments-display,
+.user-comment,
+.portfolio-grid > div,
+.two-column > div,
+.badge-container > div,
+[style*="background: #1c2541"],
+[style*="background:#1c2541"],
+[style*="background: #0b1329"],
+[style*="background:#0b1329"],
+[style*="background: rgba(28, 37, 65"],
+[style*="background:rgba(28, 37, 65"],
+[style*="background: rgba(11, 19, 41"],
+[style*="background:rgba(11, 19, 41"],
+[style*="background: #3a506b"],
+[style*="background:#3a506b"],
+[style*="background: gray"],
+[style*="background:gray"]{
+    background:var(--final-white) !important;
+    color:var(--final-text) !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    border-right:6px solid var(--final-sage) !important;
+    border-bottom:0 !important;
+    box-shadow:0 14px 34px rgba(16,42,67,.08) !important;
+}
+
+/* تنويع هادئ بين البطاقات */
+.portfolio-grid > div:nth-child(even),
+.badge-container > div:nth-child(even),
+.card:nth-child(even),
+[class*="card"]:nth-child(even){
+    background:var(--final-gold-light) !important;
+    border-right-color:var(--final-gold) !important;
+}
+
+.portfolio-grid > div:nth-child(odd),
+.badge-container > div:nth-child(odd),
+.card:nth-child(odd),
+[class*="card"]:nth-child(odd){
+    background:var(--final-soft) !important;
+    border-right-color:var(--final-sage) !important;
+}
+
+/* الصناديق الداخلية الصغيرة داخل البطاقات */
+[style*="background: rgba(0,0,0,0.2)"],
+[style*="background:rgba(0,0,0,0.2)"],
+[style*="background: rgba(0, 0, 0, 0.2)"],
+[style*="background:rgba(0, 0, 0, 0.2)"]{
+    background:rgba(122,157,140,.10) !important;
+    border:1px solid rgba(122,157,140,.16) !important;
+}
+
+/* النصوص داخل البطاقات */
+.card *,
+[class*="card"] *,
+.badge *,
+.portfolio-grid > div *,
+.badge-container > div *,
+.two-column > div *{
+    color:var(--final-text) !important;
+    text-shadow:none !important;
+}
+
+.card h3,
+[class*="card"] h3,
+.portfolio-grid h3,
+.badge-container h3,
+.two-column h3{
+    color:var(--final-navy) !important;
+}
+
+.card i,
+[class*="card"] i,
+.portfolio-grid i,
+.badge-container i{
+    color:var(--final-sage) !important;
+}
+
+/* الأرقام الكبيرة مثل 500 */
+[style*="font-size: 60px"],
+[style*="font-size:60px"],
+[style*="font-size: 70px"],
+[style*="font-size:70px"],
+[style*="font-size: 80px"],
+[style*="font-size:80px"]{
+    color:var(--final-gold) !important;
+}
+
+/* أزرار الاستعراض */
+.btn-action,
+button,
+input[type="submit"],
+a[style*="background"]{
+    background:linear-gradient(135deg,var(--final-sage),#8FB4A2) !important;
+    color:#fff !important;
+    border:0 !important;
+    box-shadow:0 10px 22px rgba(122,157,140,.22) !important;
+}
+
+.btn-action *,
+button *,
+a[style*="background"] *{
+    color:#fff !important;
+}
+
+/* شريط التنقل */
+.nav-controls{
+    background:rgba(255,255,255,.94) !important;
+}
+
+.nav-btn{
+    background:#fff !important;
+    color:var(--final-navy) !important;
+}
+
+.nav-btn:hover{
+    background:var(--final-sage) !important;
+    color:white !important;
+}
+
+/* العناوين الكبيرة */
+.slide-title{
+    background:rgba(255,255,255,.76) !important;
+    color:var(--final-navy) !important;
+    border-right:8px solid var(--final-sage) !important;
+}
+
+h1,h2{
+    color:var(--final-navy) !important;
+}
+
+p,li,span{
+    color:var(--final-text) !important;
+}
+
+/* تحسين خاص للجوال */
+@media screen and (max-width:768px){
+    .portfolio-grid > div,
+    .badge-container > div,
+    .card,
+    [class*="card"]{
+        background:#fff !important;
+        border-right:5px solid var(--final-sage) !important;
+        border-radius:18px !important;
+        padding:20px 16px !important;
+    }
+}
+
+
+/* ===== تعديلات نهائية مطلوبة: حذف طابع الصور الداكنة وتوحيد البطاقات ===== */
+.impact-skills-panel{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(180px,1fr));
+    gap:18px;
+    width:100%;
+}
+.impact-skill{
+    background:#ffffff;
+    border:1px solid rgba(122,157,140,.22);
+    border-right:6px solid #7A9D8C;
+    border-radius:20px;
+    padding:22px 18px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    box-shadow:0 12px 28px rgba(16,42,67,.07);
+    color:#102A43;
+    font-weight:700;
+}
+.impact-skill:nth-child(even){
+    background:#FBF7EF;
+    border-right-color:#C8A96B;
+}
+.impact-skill i{
+    color:#7A9D8C !important;
+    font-size:26px;
+}
+.impact-skill:nth-child(even) i{
+    color:#C8A96B !important;
+}
+
+.credential-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+    width:100%;
+}
+.credential-card{
+    background:#ffffff !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    border-right:6px solid #7A9D8C !important;
+    border-radius:22px;
+    padding:26px 22px;
+    min-height:220px;
+    box-shadow:0 14px 34px rgba(16,42,67,.08);
+    text-align:right;
+}
+.credential-card.gold{
+    background:#FBF7EF !important;
+    border-right-color:#C8A96B !important;
+}
+.credential-card i{
+    font-size:28px;
+    color:#7A9D8C !important;
+    margin-bottom:14px;
+}
+.credential-card.gold i{
+    color:#C8A96B !important;
+}
+.credential-card h3{
+    color:#102A43 !important;
+    font-size:22px;
+    margin-bottom:12px;
+}
+.credential-card p{
+    color:#334155 !important;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* تحويل أي بطاقة تحتوي رقم 500 من كحلي إلى بيج فاتح */
+/* دعم عملي لمعظم المتصفحات عبر استهداف الأنماط الداكنة حول 500 */
+[style*="500"],
+[style*="تجاوزت"]{
+    background:#FBF7EF !important;
+    color:#102A43 !important;
+    border:1px solid rgba(200,169,107,.28) !important;
+    border-right:6px solid #C8A96B !important;
+}
+
+/* بطاقة خاصة إن وجدت */
+.volunteer-hours-card{
+    background:#FBF7EF !important;
+    border:1px solid rgba(200,169,107,.28) !important;
+    border-right:6px solid #C8A96B !important;
+    color:#102A43 !important;
+    border-radius:22px;
+    padding:32px;
+    text-align:center;
+    box-shadow:0 14px 34px rgba(16,42,67,.08);
+}
+.volunteer-hours-card .hours-number{
+    color:#C8A96B !important;
+    font-size:72px;
+    font-weight:900;
+    line-height:1;
+}
+.volunteer-hours-card .hours-title{
+    color:#102A43 !important;
+    font-size:24px;
+    font-weight:800;
+    margin-top:14px;
+}
+
+@media screen and (max-width:768px){
+    .impact-skills-panel{grid-template-columns:1fr;}
+    .credential-card{min-height:auto;padding:22px 18px;}
+}
+
+
+/* إصلاح نهائي: حذف فراغ صورة جمعية فرقان وتوحيد قسم التطوع */
+.image-wrapper:empty,
+.card:empty,
+div:empty{
+    min-height:0 !important;
+}
+
+.volunteer-extra-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(240px,1fr));
+    gap:24px;
+    width:100%;
+    margin:28px 0;
+}
+
+.community-impact-card{
+    background:#ffffff !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    border-right:6px solid #7A9D8C !important;
+    border-radius:24px;
+    padding:32px;
+    box-shadow:0 14px 34px rgba(16,42,67,.08);
+    text-align:right;
+}
+
+.community-impact-card i{
+    color:#7A9D8C !important;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.community-impact-card h3{
+    color:#102A43 !important;
+    font-size:26px;
+    margin-bottom:12px;
+}
+
+.community-impact-card p,
+.volunteer-hours-card p{
+    color:#66788A !important;
+    font-size:17px;
+    line-height:1.9;
+}
+
+@media screen and (max-width:768px){
+    .volunteer-extra-grid{
+        grid-template-columns:1fr !important;
+    }
+}
+
+
+/* إصلاح المسافة في التطوع وحذف الكود الظاهر */
+.volunteer-compact-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    width:100%;
+    margin:22px 0 18px 0;
+    align-items:stretch;
+}
+
+.volunteer-compact-row .community-impact-card,
+.volunteer-compact-row .volunteer-hours-card{
+    min-height:260px;
+    margin:0 !important;
+}
+
+.volunteer-hours-card{
+    background:#FBF7EF !important;
+    border:1px solid rgba(200,169,107,.28) !important;
+    border-right:6px solid #C8A96B !important;
+    color:#102A43 !important;
+    border-radius:24px;
+    padding:34px 26px;
+    text-align:center;
+    box-shadow:0 14px 34px rgba(16,42,67,.08);
+}
+
+.volunteer-hours-card .hours-number{
+    color:#C8A96B !important;
+    font-size:72px;
+    font-weight:900;
+    line-height:1;
+}
+
+.volunteer-hours-card .hours-title{
+    color:#102A43 !important;
+    font-size:25px;
+    font-weight:800;
+    margin-top:14px;
+}
+
+.community-impact-card{
+    background:#fff !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    border-right:6px solid #7A9D8C !important;
+    border-radius:24px;
+    padding:34px 26px;
+    box-shadow:0 14px 34px rgba(16,42,67,.08);
+    text-align:right;
+}
+
+.community-impact-card i{
+    color:#7A9D8C !important;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.community-impact-card h3{
+    color:#102A43 !important;
+    font-size:26px;
+    margin-bottom:12px;
+}
+
+.community-impact-card p,
+.volunteer-hours-card p{
+    color:#66788A !important;
+    font-size:17px;
+    line-height:1.9;
+}
+
+/* تقليل المسافات داخل شريحة التطوع */
+#slide6 .content-area{
+    justify-content:flex-start !important;
+    gap:18px !important;
+}
+
+#slide6{
+    justify-content:flex-start !important;
+    padding-top:40px !important;
+}
+
+/* إخفاء أي بقايا نصية للكود إن وُجدت */
+body{
+    overflow-x:hidden;
+}
+
+@media screen and (max-width:768px){
+    .volunteer-compact-row{
+        grid-template-columns:1fr !important;
+        gap:18px !important;
+        margin:18px 0 !important;
+    }
+    .volunteer-compact-row .community-impact-card{
+        order:1;
+    }
+    .volunteer-compact-row .volunteer-hours-card{
+        order:2;
+    }
+}
+
+
+/* إصلاح جذري ونهائي لصفحة التطوع */
+.volunteer-slide-clean{
+    justify-content:flex-start !important;
+    padding-top:36px !important;
+    overflow-y:auto !important;
+}
+
+.volunteer-clean-wrapper{
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.volunteer-top-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    width:100%;
+}
+
+.volunteer-mini-card,
+.community-impact-card,
+.volunteer-hours-card,
+.volunteer-doc-card{
+    border-radius:24px !important;
+    box-shadow:0 14px 34px rgba(16,42,67,.08) !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    background:#fff !important;
+}
+
+.volunteer-mini-card{
+    border-right:6px solid #7A9D8C !important;
+    padding:26px 22px;
+    text-align:center;
+    min-height:190px;
+}
+
+.volunteer-mini-card h3{
+    color:#102A43 !important;
+    font-size:25px;
+    margin-bottom:14px;
+}
+
+.volunteer-mini-card p{
+    color:#334155 !important;
+    font-size:18px;
+    line-height:1.9;
+}
+
+.volunteer-main-cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    width:100%;
+}
+
+.community-impact-card{
+    border-right:6px solid #7A9D8C !important;
+    padding:32px 28px;
+    text-align:right;
+}
+
+.community-impact-card i{
+    color:#7A9D8C !important;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.community-impact-card h3{
+    color:#102A43 !important;
+    font-size:30px;
+    margin-bottom:14px;
+}
+
+.community-impact-card p{
+    color:#66788A !important;
+    font-size:18px;
+    line-height:2;
+}
+
+.volunteer-hours-card{
+    background:#FBF7EF !important;
+    border-right:6px solid #C8A96B !important;
+    padding:32px 28px;
+    text-align:center;
+}
+
+.volunteer-hours-card .hours-number{
+    color:#C8A96B !important;
+    font-size:82px;
+    font-weight:900;
+    line-height:1;
+}
+
+.volunteer-hours-card .hours-title{
+    color:#102A43 !important;
+    font-size:29px;
+    font-weight:800;
+    margin:16px 0 10px;
+}
+
+.volunteer-hours-card p{
+    color:#66788A !important;
+    font-size:18px;
+    line-height:1.9;
+}
+
+.volunteer-doc-card{
+    border-right:6px solid #7A9D8C !important;
+    padding:30px 28px;
+    text-align:right;
+}
+
+.volunteer-doc-card h3{
+    color:#102A43 !important;
+    font-size:29px;
+    margin-bottom:12px;
+}
+
+.volunteer-doc-card p{
+    color:#334155 !important;
+    font-size:18px;
+    line-height:2;
+}
+
+.volunteer-doc-card .btn-action{
+    margin-top:16px;
+}
+
+/* إلغاء أي قواعد قديمة أثرت على قسم التطوع */
+#slide6 .portfolio-grid,
+#slide6 .volunteer-extra-grid,
+#slide6 .volunteer-compact-row{
+    display:unset !important;
+}
+
+@media screen and (max-width:768px){
+    .volunteer-slide-clean{
+        padding:34px 18px 105px 18px !important;
+    }
+
+    .volunteer-clean-wrapper{
+        gap:18px !important;
+    }
+
+    .volunteer-top-cards,
+    .volunteer-main-cards{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:18px !important;
+    }
+
+    .volunteer-mini-card,
+    .community-impact-card,
+    .volunteer-hours-card,
+    .volunteer-doc-card{
+        width:100% !important;
+        min-height:auto !important;
+        padding:22px 18px !important;
+        border-radius:22px !important;
+    }
+
+    .volunteer-mini-card h3,
+    .community-impact-card h3,
+    .volunteer-doc-card h3{
+        font-size:24px !important;
+    }
+
+    .volunteer-mini-card p,
+    .community-impact-card p,
+    .volunteer-hours-card p,
+    .volunteer-doc-card p{
+        font-size:16px !important;
+        line-height:1.9 !important;
+    }
+
+    .volunteer-hours-card .hours-number{
+        font-size:70px !important;
+    }
+
+    .volunteer-hours-card .hours-title{
+        font-size:24px !important;
+    }
+}
+
+
+/* الإصدار النهائي - إزالة الفراغ بعد جمعية فرقان */
+#slide5 .content-area,
+#slide5 .portfolio-grid,
+#slide5 .card{
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
+#slide5{
+    gap:12px !important;
+}
+
+
+/* ===== الإصلاح النهائي الحقيقي: جمعية فرقان + التطوع ===== */
+
+.furqan-slide-clean{
+    justify-content:center !important;
+    padding:38px 24px 95px 24px !important;
+    gap:22px !important;
+    overflow-y:auto !important;
+}
+
+.furqan-clean-card{width:88%;max-width:700px;margin:0 auto;
+    width:100%;
+    max-width:900px;
+    background:#fff !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    border-right:6px solid #7A9D8C !important;
+    border-radius:24px;
+    padding:34px 28px;
+    box-shadow:0 14px 34px rgba(16,42,67,.08);
+    text-align:center;
+    margin:0 auto !important;
+}
+
+.furqan-clean-card h3{
+    color:#102A43 !important;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.furqan-clean-card p{
+    color:#334155 !important;
+    font-size:20px;
+    line-height:2;
+}
+
+/* صفحة التطوع النهائية */
+.volunteer-slide-final{
+    justify-content:flex-start !important;
+    padding:34px 24px 105px 24px !important;
+    overflow-y:auto !important;
+}
+
+.volunteer-final-wrapper{
+    width:100%;
+    max-width:920px;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:16px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+}
+
+.volunteer-final-card,
+.volunteer-final-hours{
+    width:100% !important;
+    box-sizing:border-box !important;
+    background:#fff !important;
+    border:1px solid rgba(122,157,140,.22) !important;
+    border-right:6px solid #7A9D8C !important;
+    border-radius:22px !important;
+    padding:22px 20px !important;
+    box-shadow:0 10px 24px rgba(16,42,67,.07) !important;
+    text-align:center !important;
+    min-height:auto !important;
+    height:auto !important;
+    margin:0 !important;
+}
+
+.volunteer-final-card.gold,
+.volunteer-final-hours{
+    background:#FBF7EF !important;
+    border-right-color:#C8A96B !important;
+}
+
+.volunteer-final-card h3,
+.volunteer-final-hours h3{
+    color:#102A43 !important;
+    font-size:25px !important;
+    margin:0 0 10px 0 !important;
+    line-height:1.4 !important;
+}
+
+.volunteer-final-card p,
+.volunteer-final-hours p{
+    color:#334155 !important;
+    font-size:17px !important;
+    line-height:1.9 !important;
+    margin:0 !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+}
+
+.volunteer-final-hours .hours-number{
+    color:#C8A96B !important;
+    font-size:64px !important;
+    font-weight:900 !important;
+    line-height:1 !important;
+    margin-bottom:10px !important;
+}
+
+/* إلغاء أي قواعد قديمة قد تجبر الأعمدة أو تقطع النص */
+#slide6 .portfolio-grid,
+#slide6 .volunteer-top-cards,
+#slide6 .volunteer-main-cards,
+#slide6 .volunteer-extra-grid,
+#slide6 .volunteer-compact-row,
+#slide6 .volunteer-clean-wrapper{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    grid-template-columns:none !important;
+}
+
+#slide6 *{
+    max-width:100% !important;
+}
+
+@media screen and (max-width:768px){
+    .furqan-slide-clean{
+        justify-content:flex-start !important;
+        padding:34px 18px 100px 18px !important;
+        gap:16px !important;
+    }
+
+    .furqan-clean-card{
+        padding:24px 18px !important;
+        border-radius:22px !important;
+        margin-top:0 !important;
+    }
+
+    .furqan-clean-card h3{
+        font-size:27px !important;
+    }
+
+    .furqan-clean-card p{
+        font-size:16px !important;
+        line-height:1.9 !important;
+    }
+
+    .volunteer-slide-final{
+        padding:34px 18px 105px 18px !important;
+    }
+
+    .volunteer-final-wrapper{
+        gap:14px !important;
+    }
+
+    .volunteer-final-card,
+    .volunteer-final-hours{
+        padding:20px 16px !important;
+        border-radius:20px !important;
+        text-align:center !important;
+    }
+
+    .volunteer-final-card h3,
+    .volunteer-final-hours h3{
+        font-size:23px !important;
+    }
+
+    .volunteer-final-card p,
+    .volunteer-final-hours p{
+        font-size:15.5px !important;
+        line-height:1.85 !important;
+    }
+
+    .volunteer-final-hours .hours-number{
+        font-size:58px !important;
+    }
+}
+
+
+@media(max-width:768px){
+.furqan-clean-card{
+    width:92% !important;
+    padding:22px 18px !important;
+}
+}
+
+
+/* ===== لمسة الإبهار: أيقونات احترافية موحدة للمحفظة ===== */
+.icon-title{
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+    justify-content:flex-start !important;
+}
+
+.icon-title i{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#EAF3EE,#FFFFFF);
+    color:#7A9D8C !important;
+    border:1px solid rgba(122,157,140,.25);
+    box-shadow:0 8px 20px rgba(16,42,67,.08);
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.icon-title span{
+    color:#102A43 !important;
+}
+
+.card-title-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:12px !important;
+    color:#102A43 !important;
+    line-height:1.4 !important;
+}
+
+.card-title-icon i{
+    width:42px;
+    height:42px;
+    border-radius:14px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#EAF3EE;
+    color:#7A9D8C !important;
+    border:1px solid rgba(122,157,140,.25);
+    font-size:19px;
+    flex-shrink:0;
+}
+
+.card-title-icon span{
+    color:#102A43 !important;
+}
+
+.card:nth-child(even) .card-title-icon i,
+.credential-card.gold .card-title-icon i,
+.volunteer-final-card.gold .card-title-icon i,
+.volunteer-final-hours .card-title-icon i{
+    background:#FBF7EF;
+    color:#C8A96B !important;
+    border-color:rgba(200,169,107,.28);
+}
+
+.impact-hero-icons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin:26px auto 18px;
+}
+
+.impact-hero-icons div{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(122,157,140,.22);
+    border-radius:999px;
+    padding:11px 18px;
+    box-shadow:0 10px 24px rgba(16,42,67,.07);
+    color:#102A43;
+    font-weight:700;
+}
+
+.impact-hero-icons i{
+    color:#7A9D8C !important;
+    font-size:18px;
+}
+
+.impact-skill i,
+.credential-card > i,
+.community-impact-card > i{
+    filter:drop-shadow(0 6px 10px rgba(122,157,140,.18));
+}
+
+/* تحسين عرض أيقونات الاعتمادات القديمة داخل السطر */
+#slide3 i{
+    opacity:1 !important;
+}
+
+/* للجوال */
+@media(max-width:768px){
+    .icon-title{
+        gap:10px !important;
+        align-items:center !important;
+    }
+
+    .icon-title i{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .card-title-icon{
+        justify-content:center !important;
+        gap:10px !important;
+        text-align:center !important;
+    }
+
+    .card-title-icon i{
+        width:36px;
+        height:36px;
+        font-size:16px;
+        border-radius:12px;
+    }
+
+    .impact-hero-icons{
+        gap:8px;
+        margin:20px auto 12px;
+    }
+
+    .impact-hero-icons div{
+        padding:9px 13px;
+        font-size:14px;
+    }
+}
+
+
+/* إصلاح ظهور الأيقونات: استخدام رموز ثابتة بدل FontAwesome */
+.real-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:14px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#EAF3EE;
+    border:1px solid rgba(122,157,140,.25);
+    font-size:22px;
+    line-height:1;
+    box-shadow:0 8px 18px rgba(16,42,67,.07);
+}
+
+.icon-title .real-icon{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:50%;
+    font-size:23px;
+}
+
+.card-title-icon .real-icon{
+    margin-left:6px;
+}
+
+.card:nth-child(even) .real-icon,
+.credential-card.gold .real-icon,
+.volunteer-final-card.gold .real-icon,
+.volunteer-final-hours .real-icon{
+    background:#FBF7EF;
+    border-color:rgba(200,169,107,.28);
+}
+
+.impact-hero-icons .real-icon{
+    width:auto;
+    height:auto;
+    min-width:auto;
+    background:transparent;
+    border:0;
+    box-shadow:none;
+    font-size:20px;
+}
+
+/* إلغاء مربعات FontAwesome الفارغة نهائياً */
+.fa-solid:empty,
+.fas:empty,
+i:empty{
+    display:none !important;
+}
+
+@media(max-width:768px){
+    .real-icon{
+        width:36px;
+        height:36px;
+        min-width:36px;
+        font-size:19px;
+        border-radius:12px;
+    }
+    .icon-title .real-icon{
+        width:40px;
+        height:40px;
+        min-width:40px;
+        font-size:20px;
+    }
+}
+
+
+/* ضبط نهائي للأيقونات: أيقونة واحدة فقط لكل عنوان */
+.icon-title,
+.card-title-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:12px !important;
+    text-align:center !important;
+}
+
+.icon-title .real-icon{
+    width:46px !important;
+    height:46px !important;
+    min-width:46px !important;
+    border-radius:50% !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:#EAF3EE !important;
+    border:1px solid rgba(122,157,140,.25) !important;
+    box-shadow:0 8px 18px rgba(16,42,67,.07) !important;
+    font-size:22px !important;
+    line-height:1 !important;
+}
+
+.card-title-icon .real-icon{
+    width:40px !important;
+    height:40px !important;
+    min-width:40px !important;
+    border-radius:14px !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:#EAF3EE !important;
+    border:1px solid rgba(122,157,140,.25) !important;
+    box-shadow:0 8px 18px rgba(16,42,67,.06) !important;
+    font-size:20px !important;
+    line-height:1 !important;
+}
+
+.title-text{
+    color:#102A43 !important;
+}
+
+/* منع أي بقايا مربعات فارغة */
+i, .fa, .fas, .fa-solid{
+    display:none !important;
+}
+
+@media(max-width:768px){
+    .icon-title .real-icon{
+        width:38px !important;
+        height:38px !important;
+        min-width:38px !important;
+        font-size:19px !important;
+    }
+
+    .card-title-icon .real-icon{
+        width:34px !important;
+        height:34px !important;
+        min-width:34px !important;
+        font-size:18px !important;
+    }
+
+    .icon-title,
+    .card-title-icon{
+        gap:9px !important;
+    }
+}
+
+
+/* أيقونات نهائية ثابتة داخل HTML لكل العناوين والبطاقات */
+.portfolio-title-with-icon,
+.portfolio-card-title-with-icon{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:12px !important;
+    text-align:center !important;
+}
+
+.portfolio-emoji-icon{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+    border-radius:14px !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:#EAF3EE !important;
+    border:1px solid rgba(122,157,140,.28) !important;
+    box-shadow:0 8px 18px rgba(16,42,67,.07) !important;
+    font-size:21px !important;
+    line-height:1 !important;
+}
+
+.slide-title .portfolio-emoji-icon{
+    width:48px !important;
+    height:48px !important;
+    min-width:48px !important;
+    border-radius:50% !important;
+    font-size:23px !important;
+}
+
+.portfolio-title-text{
+    color:#102A43 !important;
+}
+
+/* إزالة أي بقايا مربعات أو أيقونات قديمة */
+i, .fa, .fas, .fa-solid, .real-icon, .fixed-portfolio-icon{
+    display:none !important;
+}
+
+@media(max-width:768px){
+    .portfolio-title-with-icon,
+    .portfolio-card-title-with-icon{
+        gap:9px !important;
+    }
+    .portfolio-emoji-icon{
+        width:36px !important;
+        height:36px !important;
+        min-width:36px !important;
+        font-size:18px !important;
+        border-radius:12px !important;
+    }
+    .slide-title .portfolio-emoji-icon{
+        width:40px !important;
+        height:40px !important;
+        min-width:40px !important;
+        font-size:20px !important;
+    }
+}
+
+
+/* نسخة نهائية: الأيقونات أصبحت نصًا ثابتًا لا يختفي */
+i, .fa, .fas, .fa-solid,
+.real-icon, .fixed-portfolio-icon, .portfolio-emoji-icon{
+    display:none !important;
+}
+
+.slide-title,
+h3{
+    text-align:center !important;
+}
+
+@media(max-width:768px){
+    .slide-title{
+        font-size:24px !important;
+        line-height:1.5 !important;
+    }
+    h3{
+        font-size:22px !important;
+        line-height:1.5 !important;
+    }
+}
+
+
+/* فحص نهائي للأيقونات: أيقونة واحدة ظاهرة لكل قسم أساسي وفرعي */
+i, .fa, .fas, .fa-solid,
+.real-icon, .fixed-portfolio-icon, .portfolio-emoji-icon{
+    display:none !important;
+}
+
+/* ضبط صفحة الشراكات والتواصل */
+#slide9{
+    justify-content:center !important;
+    gap:18px !important;
+    padding-top:42px !important;
+}
+#slide9 .content-area{
+    flex-grow:0 !important;
+    justify-content:flex-start !important;
+    gap:20px !important;
+    overflow:visible !important;
+}
+#slide9 p{
+    margin:0 auto 18px auto !important;
+}
+#slide9 .btn-action{
+    white-space:nowrap !important;
+    min-width:230px;
+    justify-content:center !important;
+}
+
+/* تحسين ظهور عناوين الأقسام بالأيقونات النصية */
+.slide-title, h3{
+    unicode-bidi:plaintext;
+}
+
+@media(max-width:768px){
+    #slide9{
+        min-height:auto !important;
+        padding-top:36px !important;
+    }
+    #slide9 p{
+        font-size:16px !important;
+        line-height:1.9 !important;
+        margin-bottom:14px !important;
+    }
+    #slide9 .btn-action{
+        width:100% !important;
+        max-width:330px !important;
+        padding:14px 18px !important;
+        font-size:17px !important;
+        white-space:nowrap !important;
+    }
+}
+
+
+/* ضبط إضافي لبطاقة الدبلوم العالي المضافة */
+#slide-diplomas .portfolio-grid > .card:last-child{
+    margin-top:0 !important;
+}
+#slide3 div[style*="إتمام الدبلوم العالي"]{
+    min-height:auto !important;
+}
+
+
+/* ضبط نهائي لقسم الاعتمادات: كل شهادة في مستطيل مستقل */
+#slide3 .portfolio-grid > div{
+    width:100% !important;
+    box-sizing:border-box !important;
+}
+#slide3 .portfolio-grid > div > div{
+    width:100% !important;
+    box-sizing:border-box !important;
+}
+
 </style>
 </head>
 <body>
-
 <!-- شريط التنقل السفلي الثابت الفعّال -->
 <div class="nav-controls">
-    <a href="#slide1" class="nav-btn" title="الرئيسية">1</a>
-    <a href="#slide2" class="nav-btn" title="التعريف">2</a>
-    <a href="#slide3" class="nav-btn" title="الشهادات">3</a>
-    <a href="#slide-diplomas" class="nav-btn" title="الدبلومات">4</a>
-    <a href="#slide-experience" class="nav-btn" title="الخبرات">5</a>
-    <a href="#slide-development-courses" class="nav-btn" title="الدورات">6</a>
-    <a href="#slide4" class="nav-btn" title="الحقائب">7</a>
-    <a href="#slide5" class="nav-btn" title="فرقان">8</a>
-    <a href="#slide6" class="nav-btn" title="التطوع">9</a>
-    <a href="#slide7" class="nav-btn" title="المبادرة">10</a>
-    <a href="#slide8" class="nav-btn" title="الآراء">11</a>
-    <a href="#slide9" class="nav-btn" title="تواصل">12</a>
-    <a href="#slide10" class="nav-btn" title="الخاتمة">13</a>
+<a class="nav-btn" href="#slide1" title="الواجهة">1</a>
+<a class="nav-btn" href="#slide2" title="من أنا">2</a>
+<a class="nav-btn" href="#slide3" title="الاعتمادات">3</a>
+<a class="nav-btn" href="#slide-diplomas" title="المؤهلات">4</a>
+<a class="nav-btn" href="#slide-experience" title="الخبرات">5</a>
+<a class="nav-btn" href="#slide-development-courses" title="التطوير">6</a>
+<a class="nav-btn" href="#slide4" title="التدريب">7</a>
+<a class="nav-btn" href="#slide5" title="فرقان">8</a>
+<a class="nav-btn" href="#slide6" title="التطوع">9</a>
+<a class="nav-btn" href="#slide7" title="المبادرات">10</a>
+<a class="nav-btn" href="#slide8" title="الآراء">11</a>
+<a class="nav-btn" href="#slide9" title="التواصل">12</a>
+<a class="nav-btn" href="#slide10" title="الخاتمة">13</a>
 </div>
 <div class="slides-wrapper">
-
-    <!-- الشريحة 1: الواجهة الرئيسية -->
-    <div class="slide-container title-slide-bg" id="slide1">
-        <div style="text-align: center;">
-            <h3 style="color: #f59e0b; letter-spacing: 3px; font-weight: 400;">المحفظة الرقمية المهنية</h3>
-            <h1>أ. تهاني القرشي</h1>
-            <p style="font-size: 24px; margin-top: 20px;"> بكالوريوس | مدرب تقني | خبير ذكاء اصطناعي | أخصائي مايكروسوفت | أخصائي إرشاد تطوعي</p>
-            <div style="width: 150px; height: 5px; background: #10b981; margin: 30px auto; border-radius: 5px;"></div>
-            <a href="#slide2" class="nav-arrow" style="font-size: 24px;"><i class="fa-solid fa-circle-chevron-down"></i> ابدئي التصفح</a>
-        </div>
-    </div>
-
-    <!-- الشريحة 2: النبذة التعريفية -->
-    <div class="slide-container" id="slide2">
-        <h2 class="slide-title">التعريف الشخصي والرؤية</h2>
-        <div class="content-area">
-            <div class="two-column">
-                <div style="text-align: justify;">
+<!-- الشريحة 1: الواجهة الرئيسية -->
+<div class="slide-container" id="slide1" style="background:linear-gradient(135deg,#faf8f3 0%,#f3f7f4 50%,#eef4f2 100%);color:#102a43;position:relative;overflow:hidden;">
+<div style="position:absolute;top:-150px;left:-150px;width:500px;height:500px;border-radius:50%;background:rgba(122,157,140,.08);"></div>
+<div style="position:absolute;bottom:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:rgba(200,169,107,.08);"></div>
+<div style="position:absolute;top:20%;right:-80px;width:300px;height:300px;border:2px solid rgba(122,157,140,.15);border-radius:50%;"></div>
+<div style="position:absolute;bottom:15%;left:-50px;width:250px;height:250px;border:2px solid rgba(91,112,131,.12);border-radius:50%;"></div>
+<div style="max-width:900px;text-align:center;z-index:2;">
+<div style="font-size:18px;letter-spacing:4px;color:#7a9d8c;margin-bottom:15px;font-weight:700;">PORTFOLIO</div>
+<h1 style="font-size:72px;font-weight:900;color:#102a43;margin-bottom:15px;">محفظة الأثر المهني</h1>
+<h2 style="font-size:30px;font-weight:700;color:#5b7083;margin-bottom:25px;">أ. تهاني القرشي</h2>
+<div style="width:180px;height:4px;background:#c8a96b;margin:25px auto;border-radius:20px;"></div>
+<div class="impact-hero-icons">
+<div><span>🧠 ذكاء اصطناعي</span></div>
+<div><span>🎤 تدريب</span></div>
+<div><span>💻 تقنية</span></div>
+<div><span>📊 قيادة</span></div>
+</div>
+<p style="font-size:22px;color:#4b5563;line-height:2;">
+مدربة معتمدة • خبير ذكاء اصطناعي • أخصائي مايكروسوفت
+<br/>
+قيادات تعليمية وإدارية • تطوير وتمكين • إدارة مشاريع
+</p>
+<div style="margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:15px;">
+<div style="background:#fff;padding:15px 25px;border-radius:50px;">🎓 المؤهلات</div>
+<div style="background:#fff;padding:15px 25px;border-radius:50px;">💻 التقنية</div>
+<div style="background:#fff;padding:15px 25px;border-radius:50px;">🧠 الذكاء الاصطناعي</div>
+<div style="background:#fff;padding:15px 25px;border-radius:50px;">🎤 التدريب</div>
+<div style="background:#fff;padding:15px 25px;border-radius:50px;">📊 القيادة والإدارة</div>
+</div>
+<p style="margin-top:45px;font-size:20px;font-style:italic;color:#66788a;line-height:2;">
+أسعى إلى توظيف المعرفة والتقنية والقيادة لصناعة أثر مستدام، وتحويل الأفكار إلى مبادرات ومشروعات تحقق قيمة حقيقية للمجتمع والمؤسسات.
+</p>
+</div>
+</div>
+<!-- الشريحة 2: النبذة التعريفية -->
+<div class="slide-container" id="slide2">
+<h2 class="slide-title icon-title portfolio-title-with-icon">👤 من أنا | الرؤية المهنية</h2>
+<div class="content-area">
+<div class="two-column">
+<div style="text-align: justify;">
 <p style="font-size: 22px; color: #ffffff; line-height: 1.8; letter-spacing: 0.5px;">
                         "أتميز بالشغف في مجالات التكنولوجيا والذكاء الاصطناعي، مع اهتمام بالتطوير الإداري، والتدريب، والعمل المجتمعي، وصناعة المحتوى المعرفي. أؤمن بأن التعلم المستمر والإبداع هما مفتاح التميز، لذلك أحرص على تطوير مهاراتي، ونقل الخبرات، والمساهمة في المبادرات النوعية التي تخدم الأفراد والمجتمع. طموحي يتجاوز الإنجاز الشخصي إلى صناعة أثر إيجابي يترك بصمة إيجابية في كل عمل أقدمه، من خلال توظيف المعرفة والتقنية بما يسهم في التطوير والارتقاء وبناء بيئة أكثر وعياً وتميزاً "
                     </p>
-                </div>
-                <div class="image-wrapper">
-                    <img src="https://i.top4top.io/p_3794w05vy1.jpg" alt="تكنولوجيا وذكاء اصطناعي">
-                </div>
-            </div>
-        </div>
-    </div>
-
-   <!-- الشريحة 3: حل مشكلة الأسماء بشكل نهائي ومستقل -->
-   <div class="slide-container" id="slide3" style="min-height: 100vh; height: auto; padding: 40px 20px;">
-        <h2 class="slide-title">الاعتمادات المهنية والشهادات</h2>
-        <div class="content-area" style="width: 100%; display: flex; justify-content: center; align-items: center;">
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; width: 100%; box-sizing: border-box;">
-                
-                <!-- الشهادة 1: مدرب معتمد -->
-                <div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
-                    <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-user-gear" style="font-size: 24px; color: #10b981;"></i>
-                        <div style="text-align: right;">
-                            <span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">مدرب معتمد</span>
-                            <span style="font-size: 12px; color: #cbd5e1;">المؤسسة العامة للتدريب</span>
-                        </div>
-                    </div>
-                    <div style="height: 130px; width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
-                        <img src="https://i.top4top.io/p_3794x1ame2.png" alt="شهادة مدرب معتمد" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <a href="https://i.top4top.io/p_3794x1ame2.png" target="_blank" class="btn-action" style="font-size: 14px; padding: 10px; margin: 0; width: 100%; justify-content: center; text-decoration: none; text-align: center; display: block; box-sizing: border-box;">استعراض وتكبير الشهادة</a>
-                </div>
-
-                <!-- الشهادة 2: أخصائي إرشاد تطوعي -->
-                <div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #f59e0b;">
-                    <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-users-rays" style="font-size: 24px; color: #f59e0b;"></i>
-                        <div style="text-align: right;">
-                            <span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">إرشاد تطوعي</span>
-                            <span style="font-size: 12px; color: #cbd5e1;">اعتماد توجيه المبادرات</span>
-                        </div>
-                    </div>
-                    <div style="height: 130px; width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
-                        <img src="https://l.top4top.io/p_379420qpk1.png" alt="شهادة إرشاد تطوعي" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <a href="https://l.top4top.io/p_379420qpk1.png" target="_blank" class="btn-action" style="font-size: 14px; padding: 10px; margin: 0; width: 100%; justify-content: center; text-decoration: none; text-align: center; display: block; box-sizing: border-box;">استعراض وتكبير الشهادة</a>
-                </div>
-
-                <!-- الشهادة 3: خبير ذكاء اصطناعي -->
-                <div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
-                    <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-brain" style="font-size: 24px; color: #10b981;"></i>
-                        <div style="text-align: right;"><span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">ذكاء اصطناعي</span>
-                            <span style="font-size: 12px; color: #cbd5e1;"> الهيئة السعودية (سدايا) & مؤسسة دبي المستقبل</span>
-                        </div>
-                    </div>
-                    <div style="height: 130px; width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
-                        <img src="https://a.top4top.io/p_3817jfevu1.jpg" alt=""شهادة سدايا"&"مؤسسة دبي المستقبل"" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <a href="https://a.top4top.io/p_3817jfevu1.jpg" target="_blank" class="btn-action" style="font-size: 14px; padding: 10px; margin: 0; width: 100%; justify-content: center; text-decoration: none; text-align: center; display: block; box-sizing: border-box;">استعراض وتكبير الشهادة</a>
-                </div>
-
-                
-              <!-- الشهادة 4 : أخصائي مايكروسوفت -->
-                <div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #f59e0b;">
-                    <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-laptop-code" style="font-size: 24px; color: #f59e0b;"></i>
-                        <div style="text-align: right;">
-                            <span style="font-size: 16px; font-weight: bold; color: #ffffff; display: block;">أخصائي مايكروسوفت</span>
-                            <span style="font-size: 12px; color: #cbd5e1;">الاعتماد الدولي MOS</span>
-                        </div>
-                    </div>
-                    <div style="height: 130px; width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
-                        <img src="https://i.top4top.io/p_37940ilnl1.png" alt="شهادة مايكروسوفت" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <a href="https://i.top4top.io/p_37940ilnl1.png" target="_blank" class="btn-action" style="font-size: 14px; padding: 10px; margin: 0; width: 100%; justify-content: center; text-decoration: none; text-align: center; display: block; box-sizing: border-box;">استعراض وتكبير الشهادة</a>
-                </div>
-
-                <!-- الشهادة 5: دورة التبيان في تعليم القرآن -->
-                <div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
-                    <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-book-open-reader" style="font-size: 24px; color: #10b981;"></i>
-                        <div style="text-align: right;">
-                            <span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">دورة التبيان</span>
-                            <span style="font-size: 12px; color: #cbd5e1;">اجتياز دورة تعليم القرآن</span>
-                        </div>
-                    </div>
-                    <div style="height: 130px; width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
-                        <img src="https://h.top4top.io/p_3794dm4y81.png" alt="شهادة دورة التبيان" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <a href="https://h.top4top.io/p_3794dm4y81.png" target="_blank" class="btn-action" style="font-size: 14px; padding: 10px; margin: 0; width: 100%; justify-content: center; text-decoration: none; text-align: center; display: block; box-sizing: border-box;">استعراض وتكبير الشهادة</a>
-                </div>
-
-                <!-- الشهادة 6: إجازة متن تحفة الأطفال -->
-                              <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-book-quran" style="font-size: 24px; color: #f59e0b;"></i>
-                        <div style="text-align: right;">
-                            <span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">متن تحفة الأطفال</span>
-                            <span style="font-size: 12px; color: #cbd5e1;">إجازة متصلة السند بالتجويد</span>
-                        </div>
-                    </div>
-                    <div style="height: 130px; width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 12px;">
-                        <img src="https://l.top4top.io/p_3794k1bv41.png" alt="صورة إجازة تحفة الأطفال" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <a href="https://l.top4top.io/p_3794k1bv41.png" target="_blank" class="btn-action" style="font-size: 14px; padding: 10px; margin: 0; width: 100%; justify-content: center; text-decoration: none; text-align: center; display: block; box-sizing: border-box;">استعراض وتكبير الشهادة</a>
-                </div>
+</div>
+<div class="impact-skills-panel">
+<div class="impact-skill"><span>🎓 المؤهلات والتعلم المستمر</span></div>
+<div class="impact-skill"><span>🎤 التدريب وبناء القدرات</span></div>
+<div class="impact-skill"><span>💻 التقنية والتحول الرقمي</span></div>
+<div class="impact-skill"><span>🧠 الذكاء الاصطناعي</span></div>
+<div class="impact-skill"><span>📊 القيادة والإدارة</span></div>
+<div class="impact-skill"><span>🌱 المبادرات وصناعة الأثر</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 3: حل مشكلة الأسماء بشكل نهائي ومستقل -->
+<div class="slide-container" id="slide3" style="min-height:auto; height: auto; padding: 40px 20px;">
+<h2 class="slide-title icon-title portfolio-title-with-icon">🏅 الاعتمادات والإنجازات المهنية</h2>
+<div class="content-area" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; width: 100%; box-sizing: border-box;">
+<!-- الشهادة 1: مدرب معتمد -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;">
+<span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">🎤 مدرب معتمد</span>
+<span style="font-size: 12px; color: #cbd5e1;">تأهيل مهني في إعداد وتنفيذ البرامج التدريبية باحترافية.</span>
+</div>
+</div>
+</div>
+<!-- الشهادة 2: أخصائي إرشاد تطوعي -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #f59e0b;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;">
+<span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">🤝 إرشاد تطوعي</span>
+<span style="font-size: 12px; color: #cbd5e1;">اعتماد في توجيه المبادرات والعمل التطوعي وخدمة المجتمع.</span>
+</div>
+</div>
+</div>
+<!-- الشهادة 3: خبير ذكاء اصطناعي -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;"><span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">🧠 ذكاء اصطناعي</span>
+<span style="font-size: 12px; color: #cbd5e1;"> تطبيق أدوات وتقنيات الذكاء الاصطناعي في التعليم والإدارة.</span>
+</div>
+</div>
+</div>
+<!-- الشهادة 4 : أخصائي مايكروسوفت -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #f59e0b;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;">
+<span style="font-size: 16px; font-weight: bold; color: #ffffff; display: block;">💻 أخصائي مايكروسوفت</span>
+<span style="font-size: 12px; color: #cbd5e1;">إتقان تطبيقات Microsoft Office وفق المعايير الدولية.</span>
+</div>
+</div>
+</div>
+<!-- الشهادة 5: دورة التبيان في تعليم القرآن -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;">
+<span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">📖 دورة التبيان</span>
+<span style="font-size: 12px; color: #cbd5e1;">تأهيل في تعليم القرآن الكريم وفق منهجية تربوية متقنة.</span>
+</div>
+</div>
+</div>
+<!-- الشهادة 6: إجازة متن تحفة الأطفال -->
 
 
-            </div>
-
-        </div>
-    </div>
-
-<!-- الشريحة 4: الدبلومات الأكاديمية والتخصصية -->
+<!-- الشهادة 6: إجازة متن تحفة الأطفال -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;">
+<span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">📚 متن تحفة الأطفال</span>
+<span style="font-size: 12px; color: #cbd5e1;">إجازة في أحكام التجويد وإتقان متن تحفة الأطفال.</span>
+</div>
+</div>
+</div>
+<!-- الشهادة 7: إتمام الدبلوم العالي للمديرات -->
+<div style="background: #1c2541; border-radius: 14px; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; border-bottom: 4px solid #10b981;">
+<div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+<div style="text-align: right;">
+<span style="font-size: 17px; font-weight: bold; color: #ffffff; display: block;">🏅 إتمام الدبلوم العالي للمديرات في تحفيظ القرآن الكريم</span>
+<span style="font-size: 12px; color: #cbd5e1;">إنجاز أكاديمي ومهني يعزز الكفاءة القيادية والإدارية في البيئة القرآنية والتعليمية.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 4: المؤهلات والتخصصات -->
 <div class="slide-container" id="slide-diplomas">
-        <h2 class="slide-title">الدبلومات الأكاديمية والتخصصية</h2>
-        <div class="content-area">
-            <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width: 100%;">
-                
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-laptop-code" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">دبلوم حاسب آلي</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تمكين المهارات التقنية المتقدمة، وإدارة النظم البرمجية والمكتبية الحديثة لدعم أتمتة الأعمال الإدارية والتعليمية.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تخصص تقني <i class="fa-solid fa-graduation-cap"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-brain" style="font-size: 30px; color: #f59e0b;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">دبلوم صعوبات تعلم</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">دراسة الفروق الفردية واستراتيجيات التدريس العلاجي والتربوي الفعّال لمساندة الفئات الخاصة وتطوير قدراتهم المعرفية.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">تربية خاصة <i class="fa-solid fa-graduation-cap"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-children" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 19px;">تأهيل معلمات رياض الأطفال</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">إتقان الخصائص النفسية والسلوكية لمرحلة الطفولة المبكرة، وبناء المناهج والأنشطة التربوية والتأسيسية الحديثة.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تأهيل تربوي <i class="fa-solid fa-graduation-cap"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-heart-pulse" style="font-size: 30px; color: #f59e0b;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">دبلوم التربية واللياقة البدنية</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تعزيز الوعي الصحي والبدني، ودراسة أساسيات التوجيه الرياضي والنشاط الحركي السليم لرفع كفاءة جودة الحياة الصحية.</p>
-                    </div><span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">صحة وتربية بدنية <i class="fa-solid fa-graduation-cap"></i></span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-<!-- الشريحة 5: الخبرات والمسيرة المهنية والعطاء -->
+<h2 class="slide-title icon-title portfolio-title-with-icon">🎓 المؤهلات والتخصصات</h2>
+<div class="content-area">
+<div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; width: 100%;">
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">💻 دبلوم حاسب آلي</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تمكين المهارات التقنية المتقدمة، وإدارة النظم البرمجية والمكتبية الحديثة لدعم أتمتة الأعمال الإدارية والتعليمية.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تخصص تقني </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">🧩 دبلوم صعوبات تعلم</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">دراسة الفروق الفردية واستراتيجيات التدريس العلاجي والتربوي الفعّال لمساندة الفئات الخاصة وتطوير قدراتهم المعرفية.</p>
+</div>
+<span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">تربية خاصة </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 19px;">🧒 تأهيل معلمات رياض الأطفال</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">إتقان الخصائص النفسية والسلوكية لمرحلة الطفولة المبكرة، وبناء المناهج والأنشطة التربوية والتأسيسية الحديثة.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تأهيل تربوي </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">💚 دبلوم التربية واللياقة البدنية</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تعزيز الوعي الصحي والبدني، ودراسة أساسيات التوجيه الرياضي والنشاط الحركي السليم لرفع كفاءة جودة الحياة الصحية.</p>
+</div><span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">صحة وتربية بدنية </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">🎓 الدبلوم العالي للمديرات في تحفيظ القرآن الكريم</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تأهيل قيادي متخصص في إدارة المؤسسات القرآنية والتخطيط الاستراتيجي والحوكمة والإشراف التربوي وتطوير الأداء المؤسسي.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold;  margin-top: 15px; display:block; text-align: left !important; display:block; width:100%; direction:rtl;">قيادة وإدارة المؤسسات القرآنية</span>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 5: الخبرات المهنية ومسارات العطاء -->
 <div class="slide-container" id="slide-experience">
-        <h2 class="slide-title">الخبرات والمسيرة المهنية والعطاء</h2>
-        <div class="content-area">
-            <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
-                
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-chalkboard-user" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">مدربة معتمدة</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تقديم وتصميم البرامج، الحقائب التدريبية، والورش التقنية والمهارية المعتمدة لتطوير كفاءات الأفراد والمؤسسات.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">مسيرة تدريبية <i class="fa-solid fa-file-check"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-display" style="font-size: 30px; color: #f59e0b;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">معلمة ومربية</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">المساهمة الفعّالة في بناء العقول والتمكين المعرفي والتربوي للأجيال؛ من خلال تقديم المواد والمناهج التدريسية والتربوية بأسلوب إبداعي.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">تأهيل تربوي <i class="fa-solid fa-check-double"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-briefcase" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">الإدارة والسكرتارية</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">توظيف الكفايات الإدارية المتقدمة ومهارات التنظيم المكتبي لتطوير كفاءة العمل؛ من خلال أتمتة النماذج وجدولة وإدارة الأعمال التنفيذية.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تميز إداري مـكتبـي <i class="fa-solid fa-file-invoice"></i></span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
- <!-- الشريحة 6: الحصاد المهاري والبرامج التطويرية -->
+<h2 class="slide-title icon-title portfolio-title-with-icon">💼 الخبرات المهنية ومسارات العطاء</h2>
+<div class="content-area">
+<div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">🎤 مدربة معتمدة</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تقديم وتصميم البرامج، الحقائب التدريبية، والورش التقنية والمهارية المعتمدة لتطوير كفاءات الأفراد والمؤسسات.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">مسيرة تدريبية </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">📖 معلمة ومربية</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">المساهمة الفعّالة في بناء العقول والتمكين المعرفي والتربوي للأجيال؛ من خلال تقديم المواد والمناهج التدريسية والتربوية بأسلوب إبداعي.</p>
+</div>
+<span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">تأهيل تربوي </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">💼 الإدارة والسكرتارية</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">توظيف الكفايات الإدارية المتقدمة ومهارات التنظيم المكتبي لتطوير كفاءة العمل؛ من خلال أتمتة النماذج وجدولة وإدارة الأعمال التنفيذية.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تميز إداري مـكتبـي </span>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 6: التطوير المهاري والبرامج التخصصية -->
 <div class="slide-container" id="slide-development-courses">
-        <h2 class="slide-title">الحصاد المهاري والبرامج التطويرية</h2>
-        <div class="content-area">
-            <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
-                
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-users-gear" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">إدارة الموارد البشرية</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تمكين المفاهيم الحديثة لاستقطاب الكفاءات، وتطوير رأس المال البشري بما يتوافق مع الأهداف المؤسسية.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">برنامج تخصصي <i class="fa-solid fa-circle-check"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-user-tie" style="font-size: 30px; color: #f59e0b;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">السكرتارية التنفيذية</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">إتقان مهارات التنظيم المكتبي المتقدم، أتمتة التقارير الإدارية، وجدولة وإدارة الأعمال التنفيذية بكفاءة.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">برنامج تخصصي <i class="fa-solid fa-circle-check"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-video" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 20px;">الإنتاج الرقمي والمرئي</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">إتقان مهارات تصميم الإنفوجرافيك التوضيحي، وفن المونتاج وهندسة الصوت لإنتاج محتوى مرئي وتدريبي احترافي.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">مهارات رقمية <i class="fa-solid fa-circle-check"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-tower-cell" style="font-size: 30px; color: #f59e0b;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 19px;">العلاقات العامة وإدارة الأزمات</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">استراتيجيات التواصل الفعّال مع الجمهور، وتحليل المخاطر وبناء الخطط البديلة لاحتواء الأزمات المؤسسية.</p>
-                    </div><span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">كفايات قيادية <i class="fa-solid fa-circle-check"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-lightbulb" style="font-size: 30px; color: #10b981;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 19px;">الإبداع الوظيفي والتميز الشخصي</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تطوير مهارات التفكير الابتكاري في بيئة العمل، إدارة الوقت، وتحقيق الكفاءة الإنتاجية المتميزة.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تطوير مستمر <i class="fa-solid fa-circle-check"></i></span>
-                </div>
-
-                <div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <i class="fa-solid fa-rocket" style="font-size: 30px; color: #f59e0b;"></i>
-                            <h3 style="margin: 0; color: #ffffff; font-size: 19px;">المشاريع الريادية الحديثة</h3>
-                        </div>
-                        <p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">دراسة وتخطيط وإطلاق المبادرات والمشاريع العصرية بما يتوافق مع أدوات ريادة الأعمال المستدامة.</p>
-                    </div>
-                    <span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">ريادة الأعمال <i class="fa-solid fa-circle-check"></i></span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- الشريحة 7 : معرض الحقائب والبرامج التدريبية -->
-
-    <div class="slide-container" id="slide4">
-        <h2 class="slide-title">معرض الحقائب والبرامج التدريبية</h2>
-        <div class="content-area">
-            <div class="portfolio-grid">
-                <div class="card">
-
-                    <i class="fa-solid fa-mobile-screen-button" style="font-size:25px; color:#10b981;"></i>
-                    <h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">التعامل مع الأجيال الرقمية</h4>
-                    <p style="font-size:16px;">استراتيجيات التواصل الإداري والتربوي الفعال مع الجيل الرقمي الجديد.</p>
-                </div>
-                <div class="card">
-
-                    <i class="fa-solid fa-envelope-open-text" style="font-size:35px; color:#10b981;"></i>
-                    <h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">دمج المراسلات</h4>
-                    <p style="font-size:16px;">أتمتة الخطابات والشهادات وقواعد البيانات باحترافية مكتبية عالية.</p>
-                                  </div>
-                <div class="card">
-<i class="fa-solid fa-envelope-open-text" style="font-size:35px; color:#10b981;"></i>
-                    <h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">مهارات التصميم الرقمي (كانفا) </h4>
-                    <p style="font-size:16px;">مهارات التصميم الرقمي وإخراج التصاميم بشكل احترافي .</p>
-                    
-                </div>
-                <div class="card">
-<i class="fa-solid fa-envelope-open-text" style="font-size:35px; color:#10b981;"></i>
-                    <h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">التسامج الوظيفي</h4>
-                    <p style="font-size:16px;">ترسيخ قيم الاحترام والتعاون والتسامح في بيئة العمل.</p>
-                 
-                </div>
-                <div class="card">
-<i class="fa-solid fa-envelope-open-text" style="font-size:35px; color:#10b981;"></i>
-                    <h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">الذكاء الاصطناعي وتطبيقاته العملية</h4>
-                    <p style="font-size:16px;">اكتساب مهارات تطبيق الذكاء الاصطناعي في الأعمال والتعليم والحلول الرقمية.</p>
-                                    </div>
-                <div class="card">
-                    <i class="fa-solid fa-shield-halved" style="font-size:35px; color:#10b981;"></i>
-                    <h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">الحوكمة والرؤية</h4>
-                    <p style="font-size:16px;">مبادئ الحوكمة المؤسسية الموائمة لرؤية المملكة 2030 الإستراتيجية.</p>
-                                    </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- الشريحة 8 : العمل الحالي في جمعية فرقان (تعديل مقاس الصورة) -->
-    <div class="slide-container" id="slide5">
-        <h2 class="slide-title">جمعية فرقان لتحفيظ القرآن</h2>
-        <div class="content-area">
-            <div class="two-column" style="align-items: center;">
-                <!-- الإطار الأيمن: يحتوي على الصورة بعد معالجة الحجم -->
-                <div class="image-wrapper" style="height: 400px; width: 100%; border-radius: 20px; overflow: hidden; border: 3px solid rgba(245, 158, 11, 0.3); background-color: #0b1329; display: flex; align-items: center; justify-content: center; padding: 10px; box-sizing: border-box;">
-                    <!-- 💡 تم تعديل الخاصية هنا إلى object-fit: contain لإظهار كامل أبعاد الصورة دون قص -->
-                    <img src="https://j.top4top.io/p_3795gsazr1.jpg" alt="إدارة وتنظيم مكتبي - جمعية فرقان" style="width: 100%; height: 100%; object-fit: contain; display: block;">
-                </div>
-                <!-- الإطار الأيسر: يحتوي على النصوص والأزرار -->
-                <div style="text-align: right;">
-                    <h3>العمل الإداري المؤسسي الحالي</h3>
-                    <p style="font-size: 20px; line-height: 1.8;">المساهمة الفعالة في المنظومة الإدارية داخل الصرح المبارك؛ من خلال توظيف مهارات التنظيم، والحلول المكتبية المتقدمة، وأتمتة النماذج والتقارير التنفيذية لتطوير كفاءة سير العمل وتحسين الأداء الإداري الداخلي.</p>
-                    <a href="https://drive.google.com/file/d/1TgipH8OzmB0YlvBRpfJ7yxtek1UEQy4y/view?usp=drivesdk" target="_blank" class="btn-action" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px;"><i class="fa-solid fa-folder-open"></i> استعراض الملفات الإدارية</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- الشريحة 9: المسؤولية المجتمعية والعمل التطوعي -->
-   <div class="slide-container" id="slide6" style="justify-content: flex-start !important; padding-top: 40px !important;">
-        <h2 class="slide-title" style="margin-bottom: 20px !important;">المسؤولية المجتمعية والعمل التطوعي</h2>
-        
-        <div class="content-area" style="display: flex; flex-direction: column; gap: 15px; width: 100%; justify-content: flex-start;">
-            
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; direction: rtl;">
-                
-                <div style="background: #0b1329; border: 1.5px solid #10b981; padding: 15px; border-radius: 10px; text-align: right; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <i class="fa-solid fa-heart-pulse" style="font-size:24px; color:#10b981; margin-bottom: 8px;"></i>
-                    <h4 style="color:#ffffff; font-size:18px; margin: 0 0 5px 0; font-weight: bold;">جمعية سرور التطوعية</h4>
-                    <p style="font-size:14px; color: #cbd5e1; line-height: 1.4; margin: 0;">عضو إداري وممثل الجمعية لدى منصة إحسان.</p>
-                </div>
-                
-                <div style="background: #0b1329; border: 1.5px solid #10b981; padding: 15px; border-radius: 10px; text-align: right; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <i class="fa-solid fa-house-chimney-user" style="font-size:24px; color:#10b981; margin-bottom: 8px;"></i>
-                    <h4 style="color:#ffffff; font-size:18px; margin: 0 0 5px 0; font-weight: bold;">جمعية دار القيم</h4>
-                    <p style="font-size:14px; color: #cbd5e1; line-height: 1.4; margin: 0;">عضو فريق (أثر) لتقديم وتنفيذ التصاميم المجتمعية الهادفة.</p>
-                </div>
-                
-                <div style="background: #0b1329; border: 1.5px solid #10b981; padding: 15px; border-radius: 10px; text-align: right; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-                    <i class="fa-solid fa-people-group" style="font-size:24px; color:#10b981; margin-bottom: 8px;"></i>
-                    <h4 style="color:#ffffff; font-size:18px; margin: 0 0 5px 0; font-weight: bold;">الفرق المتخصصة</h4>
-                    <p style="font-size:14px; color: #cbd5e1; line-height: 1.4; margin: 0;">مساهم ميداني وتنظيمي لدى فريقيّ (أيادي بيضاء) و(أفئدتنا بكم تخفق).</p>
-                </div>
-                
-            </div>
-
-            <div style="display: flex; gap: 25px; align-items: stretch; width: 100%; direction: rtl;">
-                
-                <div style="flex: 0.8; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, #1c2541 0%, #0b1329 100%); padding: 20px; border-radius: 15px; border: 2px solid #10b981; text-align: center;">
-                    <i class="fa-solid fa-hand-holding-heart" style="font-size: 40px; color: #10b981; margin-bottom: 10px;"></i>
-                    <span style="font-size: 28px; font-weight: bold; color: #ffffff; display: block;">تجاوزت</span>
-                    <span style="font-size: 50px; font-weight: 900; color: #f59e0b; line-height: 1; font-family: 'monospace';">٥٠٠</span>
-                    <span style="font-size: 16px; color: #ffffff; font-weight: bold; margin-top: 5px;">ساعة تطوعية</span>
-                </div>
-
-                <div style="flex: 2; text-align: right; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <i class="fa-solid fa-award" style="font-size: 24px; color: #f59e0b;"></i>
-                        <h3 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: bold;">توثيق الحصاد والمبادرات</h3>
-                    </div>
-                    <p style="font-size: 15px; line-height: 1.6; color: #e2e8f0; text-align: justify; margin: 0;">المساهمة في تحقيق رؤية ٢٠٣٠ عبر العطاء المستدام بحصاد تجاوز الـ ٥٠٠ ساعة تطوعية معتمدة؛ وتتوج بسلسلة من المبادرات الرقمية والمهارية، وعلى رأسها مبادرة <strong>"علمٌ يُنتفع به"</strong> لتمكين الأثر المعرفي والتقني وتطوير الأداء الإداري.
-                    </p>
-                    
-                    <a href="https://g.top4top.io/p_3799je5dn1.png" target="_blank" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; background: #10b981; padding: 10px 20px; border-radius: 8px; color: #fff; font-size: 14px; font-weight: bold; width: fit-content;">
-                        <i class="fa-solid fa-file-pdf"></i> استعراض السجل والشهادات الرسمية
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-    <!-- الشريحة 10: مبادرة وعلم ينتفع به -->
-   <div class="slide-container" id="slide7">
-        <h2 class="slide-title"> قائدة مبادرة : علمٌ يُنتفع به (الأثر والتمكين)</h2>
-        <div class="content-area">
-            <div class="two-column" style="gap: 30px; align-items: stretch; width: 100%;">
-                
-                <div style="flex: 1; background: rgba(28, 37, 65, 0.6); padding: 25px; border-radius: 15px; border-right: 5px solid #10b981;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                        <i class="fa-solid fa-laptop-medical" style="font-size: 28px; color: #10b981;"></i>
-                        <h3 style="margin: 0; color: #ffffff; font-size: 22px;">أتمتة العمل الإداري والتقني</h3>
-                    </div>
-                    <p style="font-size: 16px; color: #cbd5e1; line-height: 1.7; text-align: justify;">
+<h2 class="slide-title icon-title portfolio-title-with-icon">📈 التطوير المهاري والبرامج التخصصية</h2>
+<div class="content-area">
+<div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">👥 إدارة الموارد البشرية</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تمكين المفاهيم الحديثة لاستقطاب الكفاءات، وتطوير رأس المال البشري بما يتوافق مع الأهداف المؤسسية.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">برنامج تخصصي </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">📝 السكرتارية التنفيذية</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">إتقان مهارات التنظيم المكتبي المتقدم، أتمتة التقارير الإدارية، وجدولة وإدارة الأعمال التنفيذية بكفاءة.</p>
+</div>
+<span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">برنامج تخصصي </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 20px;">🎬 الإنتاج الرقمي والمرئي</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">إتقان مهارات تصميم الإنفوجرافيك التوضيحي، وفن المونتاج وهندسة الصوت لإنتاج محتوى مرئي وتدريبي احترافي.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">مهارات رقمية </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 19px;">📣 العلاقات العامة وإدارة الأزمات</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">استراتيجيات التواصل الفعّال مع الجمهور، وتحليل المخاطر وبناء الخطط البديلة لاحتواء الأزمات المؤسسية.</p>
+</div><span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">كفايات قيادية </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #10b981; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 19px;">✨ الإبداع الوظيفي والتميز الشخصي</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">تطوير مهارات التفكير الابتكاري في بيئة العمل، إدارة الوقت، وتحقيق الكفاءة الإنتاجية المتميزة.</p>
+</div>
+<span style="font-size: 13px; color: #10b981; font-weight: bold; text-align: left; margin-top: 15px;">تطوير مستمر </span>
+</div>
+<div class="card" style="border-bottom: 4px solid #f59e0b; padding: 25px; background: #1c2541; display: flex; flex-direction: column; justify-content: space-between;">
+<div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 19px;">🚀 المشاريع الريادية الحديثة</h3>
+</div>
+<p style="font-size: 15px; color: #e2e8f0; line-height: 1.6;">دراسة وتخطيط وإطلاق المبادرات والمشاريع العصرية بما يتوافق مع أدوات ريادة الأعمال المستدامة.</p>
+</div>
+<span style="font-size: 13px; color: #f59e0b; font-weight: bold; text-align: left; margin-top: 15px;">ريادة الأعمال </span>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 7 : معرض الحقائب والبرامج التدريبية -->
+<div class="slide-container" id="slide4">
+<h2 class="slide-title portfolio-title-with-icon">🎤 معرض الحقائب والبرامج التدريبية</h2>
+<div class="content-area">
+<div class="portfolio-grid">
+<div class="card">
+<h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">📱 التعامل مع الأجيال الرقمية</h4>
+<p style="font-size:16px;">استراتيجيات التواصل الإداري والتربوي الفعال مع الجيل الرقمي الجديد.</p>
+</div>
+<div class="card">
+<h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">📧 دمج المراسلات</h4>
+<p style="font-size:16px;">أتمتة الخطابات والشهادات وقواعد البيانات باحترافية مكتبية عالية.</p>
+</div>
+<div class="card">
+<h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">🎨 مهارات التصميم الرقمي (Canva)</h4>
+<p style="font-size:16px;">مهارات التصميم الرقمي وإخراج التصاميم بشكل احترافي .</p>
+</div>
+<div class="card">
+<h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">🤝 التسامح الوظيفي</h4>
+<p style="font-size:16px;">ترسيخ قيم الاحترام والتعاون والتسامح في بيئة العمل.</p>
+</div>
+<div class="card">
+<h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">🧠 الذكاء الاصطناعي وتطبيقاته العملية</h4>
+<p style="font-size:16px;">اكتساب مهارات تطبيق الذكاء الاصطناعي في الأعمال والتعليم والحلول الرقمية.</p>
+</div>
+<div class="card">
+<h4 style="color:#f59e0b; font-size:22px; margin:15px 0 10px 0;">🏛️ الحوكمة والرؤية</h4>
+<p style="font-size:16px;">مبادئ الحوكمة المؤسسية الموائمة لرؤية المملكة 2030 الإستراتيجية.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 8 : العمل الحالي في جمعية فرقان (تعديل مقاس الصورة) -->
+<div class="slide-container furqan-slide-clean" id="slide5">
+<h2 class="slide-title icon-title portfolio-title-with-icon">🏛️ جمعية فرقان لتحفيظ القرآن</h2>
+<div class="furqan-clean-card">
+<h3 class="card-title-icon portfolio-card-title-with-icon">📈 العمل الإداري المؤسسي الحالي</h3>
+<p>
+            المساهمة الفعّالة في المنظومة الإدارية داخل الصرح المبارك؛ من خلال توظيف
+            مهارات التنظيم، والحلول المكتبية المتقدمة، وأتمتة النماذج والتقارير التنفيذية
+            لتطوير كفاءة سير العمل وتحسين الأداء الإداري الداخلي.
+        </p>
+</div>
+</div>
+<div class="slide-container volunteer-slide-final" id="slide6">
+<h2 class="slide-title icon-title portfolio-title-with-icon">🤝 المسؤولية المجتمعية والعمل التطوعي</h2>
+<div class="volunteer-final-wrapper">
+<div class="volunteer-final-card">
+<h3 class="card-title-icon portfolio-card-title-with-icon">🤝 جمعية سرور التطوعية</h3>
+<p>عضو إداري وممثل الجمعية لدى منصة إحسان.</p>
+</div>
+<div class="volunteer-final-card gold">
+<h3 class="card-title-icon portfolio-card-title-with-icon">🌱 جمعية دار القيم</h3>
+<p>عضو فريق (أثر) لتقديم وتنفيذ التصاميم المجتمعية الهادفة.</p>
+</div>
+<div class="volunteer-final-card">
+<h3 class="card-title-icon portfolio-card-title-with-icon">👥 الفرق المتخصصة</h3>
+<p>مساهم ميداني وتنظيمي لدى فريقي (أيادي بيضاء) و(أفدتنا بكم تخفق).</p>
+</div>
+<div class="volunteer-final-card impact">
+<h3 class="card-title-icon portfolio-card-title-with-icon">🍃 الأثر المجتمعي</h3>
+<p>
+                المساهمة في خدمة المجتمع من خلال العمل التطوعي والمبادرات النوعية،
+                وتمكين المستفيدين من المهارات التقنية والإدارية، وتعزيز ثقافة العطاء والأثر المستدام.
+            </p>
+</div>
+<div class="volunteer-final-hours">
+<div class="hours-number">+500</div>
+<h3 class="card-title-icon portfolio-card-title-with-icon">🏆 ساعة تطوعية معتمدة</h3>
+<p>حصاد تطوعي يعكس الالتزام بالعطاء وخدمة المجتمع.</p>
+</div>
+</div>
+</div>
+<div class="slide-container" id="slide7">
+<h2 class="slide-title icon-title portfolio-title-with-icon">💡 قائدة مبادرة : علمٌ يُنتفع به (الأثر والتمكين)</h2>
+<div class="content-area">
+<div class="two-column" style="gap: 30px; align-items: stretch; width: 100%;">
+<div style="flex: 1; background: rgba(28, 37, 65, 0.6); padding: 25px; border-radius: 15px; border-right: 5px solid #10b981;">
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 22px;">⚙️ أتمتة العمل الإداري والتقني</h3>
+</div>
+<p style="font-size: 16px; color: #cbd5e1; line-height: 1.7; text-align: justify;">
                         ترتكز المبادرة على تمكين المنسوبات من أتمتة النماذج والتقارير عبر حزمة **مايكروسوفت أوفيس**، مما يساهم في اختصار الوقت ورفع كفاءة الأداء الإداري بنسبة عالية وبأساليب تقنية حديثة.
                     </p>
-                </div>
-
-                <div style="flex: 1; background: rgba(28, 37, 65, 0.6); padding: 25px; border-radius: 15px; border-right: 5px solid #f59e0b;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                        <i class="fa-solid fa-landmark-flag" style="font-size: 28px; color: #f59e0b;"></i>
-                        <h3 style="margin: 0; color: #ffffff; font-size: 22px;">تمكين الخدمات الإلكترونية</h3>
-                    </div>
-                    <p style="font-size: 16px; color: #cbd5e1; line-height: 1.7; text-align: justify;">
+</div>
+<div style="flex: 1; background: rgba(28, 37, 65, 0.6); padding: 25px; border-radius: 15px; border-right: 5px solid #f59e0b;">
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+<h3 class="card-title-icon portfolio-card-title-with-icon" style="margin: 0; color: #ffffff; font-size: 22px;">🌐 تمكين الخدمات الإلكترونية</h3>
+</div>
+<p style="font-size: 16px; color: #cbd5e1; line-height: 1.7; text-align: justify;">
                         توسيع نطاق الأثر ليشمل نشر الوعي التقني بكيفية التعامل مع المنصات الحكومية الرقمية (ناجز، الضمان المطور، أبشر)؛ لتمكين المستفيدات من إنجاز المعاملات إلكترونياً بمهارة واستقلالية، تعزيزاً لمفهوم المواطنة الرقمية الفاعلة.
                     </p>
-                </div>
-
-            </div>
-            
-            <div style="width: 100%; text-align: center; margin-top: 25px;">
-                <a href="https://j.top4top.io/p_3799v1kks1.jpg" target="_blank" class="btn-action" style="background: #3a506b; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;">
-                    <i class="fa-solid fa-layer-group"></i> استعراض حقيبة مبادرة "علمٌ يُنتفع به"
+</div>
+</div>
+<div style="width: 100%; text-align: center; margin-top: 25px;">
+<a class="btn-action" href="https://j.top4top.io/p_3799v1kks1.jpg" style="background: #3a506b; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;" target="_blank">
+                     استعراض حقيبة مبادرة "علمٌ يُنتفع به"
                 </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- الشريحة 11 : نظام الآراء والتعليقات التلقائي والذكي -->
-    <div class="slide-container" id="slide8">
-        <h2 class="slide-title">أصداء العطاء والآراء التفاعلية</h2>
-        <div class="content-area">
-            <div class="comment-section">
-                <div class="comment-form">
-                    <h4 style="margin:0; color:#f59e0b; font-size:18px;">شاركينا رأيكِ وانطباعكِ:</h4>
-                    <input type="text" id="visitorName" placeholder="الاسم الكريم..." required>
-                    <textarea id="visitorText" placeholder="اكتبي رأيكِ أو رسالتكِ هنا..." required></textarea>
-<button class="btn-action" onclick="submitComment()" style="margin:0; width:100%; justify-content:center;">نشر الرأي فوراً <i class="fa-solid fa-paper-plane"></i></button>
-                </div>
-                <div class="comments-display" id="commentsBox">
-                    <div class="user-comment">
-                        <p>"محتوى قيم يلامس الواقع الفعلي بامتياز، نجاح ملموس في تقديم أدوات عملية تواكب التطور بأسلوب شيق ومبسط."</p>
-                        <div class="meta"><span>مستفيد من البرامج التدريبية</span><span><i class="fa-solid fa-star"></i> 5/5</span></div>
-                    </div>
-                    <div class="user-comment">
-                        <p>"تكامل ملحوظ وتمكن واضح في التنظيم الإداري، جودة المواد المعرفية تعكس الشغف بصناعة الأثر الإيجابي المستدام."</p>
-                        <div class="meta"><span>زائر للمحفظة الرقمية</span><span><i class="fa-solid fa-star"></i> 5/5</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- الشريحة 12: التواصل المباشر عبر الواتساب حصرياً -->
-    <div class="slide-container" id="slide9">
-        <h2 class="slide-title">بناء الشراكات المهنية</h2>
-        <div class="content-area" style="text-align: center;">
-            <p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 24px;">
+</div>
+</div>
+</div>
+<!-- الشريحة 11 : نظام الآراء والتعليقات التلقائي والذكي -->
+<div class="slide-container" id="slide8">
+<h2 class="slide-title">💬 أصداء العطاء والآراء التفاعلية</h2>
+<div class="content-area">
+<div class="comment-section">
+<div class="comment-form">
+<h4 style="margin:0; color:#f59e0b; font-size:18px;">شاركينا رأيكِ وانطباعكِ:</h4>
+<input id="visitorName" placeholder="الاسم الكريم..." required="" type="text"/>
+<textarea id="visitorText" placeholder="اكتبي رأيكِ أو رسالتكِ هنا..." required=""></textarea>
+<button class="btn-action" onclick="submitComment()" style="margin:0; width:100%; justify-content:center;">نشر الرأي فوراً </button>
+</div>
+<div class="comments-display" id="commentsBox">
+<div class="user-comment">
+<p>"محتوى قيم يلامس الواقع الفعلي بامتياز، نجاح ملموس في تقديم أدوات عملية تواكب التطور بأسلوب شيق ومبسط."</p>
+<div class="meta"><span>مستفيد من البرامج التدريبية</span><span> 5/5</span></div>
+</div>
+<div class="user-comment">
+<p>"تكامل ملحوظ وتمكن واضح في التنظيم الإداري، جودة المواد المعرفية تعكس الشغف بصناعة الأثر الإيجابي المستدام."</p>
+<div class="meta"><span>زائر للمحفظة الرقمية</span><span> 5/5</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- الشريحة 12: التواصل المباشر عبر الواتساب حصرياً -->
+<div class="slide-container" id="slide9">
+<h2 class="slide-title">🤝 بناء الشراكات المهنية</h2>
+<div class="content-area" style="text-align: center;">
+<p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 24px;">
                 مستعدة لتقديم الاستشارات التقنية والإدارية، الحقائب التدريبية المخصصة، وتوجيه وإدارة المشاريع التطوعية المعتمدة. يسعدني تواصلكم المباشر.
             </p>
-            <div style="display: flex; justify-content: center; margin-top: 20px;">
-                <!-- 💡 تنبيه: استبدلي رقم الـ9665000000000برقم واتسابكِ الحقيقي دون أصفار أو علامة + -->
-                <a href=https://api.whatsapp.com/send?phone=966500990456&text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85
-                   target="_blank" class="btn-action" style="background-color: #25D366; color: white; padding: 15px 40px; font-size: 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 26px;"></i> تواصل معي عبر الواتساب
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+<a class="btn-action" href="https://api.whatsapp.com/send?phone=966500990456&amp;text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85" style="background-color: #25D366; color: white; padding: 15px 40px; font-size: 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px;" target="_blank">
+                     تواصل معي عبر الواتساب
                 </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- الشريحة 13 : مسك الختام والامتنان -->
-    <div class="slide-container title-slide-bg" id="slide10" style="border: 2px solid rgba(16, 185, 129, 0.3);">
-        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
-            <i class="fa-solid fa-quote-right" style="font-size: 45px; color: #10b981; margin-bottom: 25px;"></i>
-            <h2 style="font-size: 34px; margin-bottom: 30px; line-height: 1.6; font-weight: 600; color: #ffffff;">
-                "وفي ختام هذا الملف، أحمد الله على ما تحقق من خبرات وإنجازات، وأسأله أن يجعل ما أقدمه علمًا نافعًا وأثرًا طيبًا ممتدًا. وما زال الطموح مستمرًا نحو مزيد من التميز والعطاء، بإذن الله، لصناعة أثر إيجابي يليق بالقيم التي أؤمن بها."
-            </h2>
-            <div style="width: 80px; height: 3px; background: #f59e0b; margin: 25px auto;"></div>
-            <p style="font-size: 24px; color: #f59e0b; font-weight: bold; letter-spacing: 0.5px;">
+</div>
+</div>
+</div>
+<!-- الشريحة 13 : مسك الختام والامتنان -->
+<div class="slide-container title-slide-bg" id="slide10" style="border: 2px solid rgba(16, 185, 129, 0.3);">
+<div style="text-align: center; max-width: 900px; margin: 0 auto;">
+<h2 style="font-size: 34px; margin-bottom: 30px; line-height: 1.6; font-weight: 600; color: #ffffff;">"وفي ختام هذا الملف، أحمد الله على ما تحقق من خبرات وإنجازات، وأسأله أن يجعل ما أقدمه علمًا نافعًا وأثرًا طيبًا ممتدًا. وما زال الطموح مستمرًا نحو مزيد من التميز والعطاء، بإذن الله، لصناعة أثر إيجابي يليق بالقيم التي أؤمن بها."</h2>
+<div style="width: 80px; height: 3px; background: #f59e0b; margin: 25px auto;"></div>
+<p style="font-size: 24px; color: #f59e0b; font-weight: bold; letter-spacing: 0.5px;">
                 شكرًا لكل من كان جزءًا من هذه الرحلة دعمًا وتشجيعًا وإلهامًا.
             </p>
-        </div>
-    </div>
-
 </div>
-
+</div>
+</div>
 <!-- البرمجة الذكية لنظام التعليقات الفوري -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -818,11 +2243,10 @@ function appendCommentHTML(name, text) {
         commentDiv.className = "user-comment";
         commentDiv.innerHTML = `
             <p>"${text}"</p>
-            <div class="meta"><span>${name}</span><span><i class="fa-solid fa-star"></i> 5/5</span></div>
+            <div class="meta"><span>${name}</span><span> 5/5</span></div>
         `;
         commentsBox.insertBefore(commentDiv, commentsBox.firstChild);
     }
 </script>
-
 </body>
 </html>
