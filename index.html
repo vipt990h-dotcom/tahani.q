@@ -1764,23 +1764,41 @@ i, .fa, .fas, .fa-solid,
 }
 
 </style>
+<style>
+/* قسم أفكار وتصميم البرامج */
+#slide-program-design .program-intro {max-width:950px;margin:0 0 28px;line-height:1.9;}
+#slide-program-design .program-feature-grid {grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;}
+#slide-program-design .program-feature-grid h3 {font-size:23px;margin:0 0 12px;}
+#slide-program-design .program-feature-grid p {font-size:17px;margin:0;line-height:1.9;}
+#slide-program-design .program-group-title {font-size:25px;margin:32px 0 18px;}
+#slide-program-design .program-tags {display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0;}
+#slide-program-design .program-tags li {background:#eef4f2;border:1px solid #d5e2db;border-radius:12px;padding:10px 18px;font-size:17px;color:#102a43;}
+#slide-program-design .program-credit {text-align:center;margin:32px 0 0;color:#66788a;font-size:17px;font-weight:700;}
+@media(max-width:768px){
+ .nav-controls {flex-wrap:wrap !important;box-sizing:border-box;}
+ .nav-btn {flex-shrink:0;}
+ #slide-program-design .program-tags {gap:9px;}
+ #slide-program-design .program-tags li {padding:8px 12px;font-size:15px;}
+}
+</style>
 </head>
 <body>
 <!-- شريط التنقل السفلي الثابت الفعّال -->
 <div class="nav-controls">
-<a class="nav-btn" href="#slide1" title="الواجهة">1</a>
-<a class="nav-btn" href="#slide2" title="من أنا">2</a>
-<a class="nav-btn" href="#slide3" title="الاعتمادات">3</a>
-<a class="nav-btn" href="#slide-diplomas" title="المؤهلات">4</a>
-<a class="nav-btn" href="#slide-experience" title="الخبرات">5</a>
-<a class="nav-btn" href="#slide-development-courses" title="التطوير">6</a>
-<a class="nav-btn" href="#slide4" title="التدريب">7</a>
-<a class="nav-btn" href="#slide5" title="فرقان">8</a>
-<a class="nav-btn" href="#slide6" title="التطوع">9</a>
-<a class="nav-btn" href="#slide7" title="المبادرات">10</a>
-<a class="nav-btn" href="#slide8" title="الآراء">11</a>
-<a class="nav-btn" href="#slide9" title="التواصل">12</a>
-<a class="nav-btn" href="#slide10" title="الخاتمة">13</a>
+<a class="nav-btn" href="#slide1" title="الواجهة" aria-label="الواجهة">1</a>
+<a class="nav-btn" href="#slide2" title="من أنا" aria-label="من أنا">2</a>
+<a class="nav-btn" href="#slide3" title="الاعتمادات" aria-label="الاعتمادات">3</a>
+<a class="nav-btn" href="#slide-diplomas" title="المؤهلات" aria-label="المؤهلات">4</a>
+<a class="nav-btn" href="#slide-experience" title="الخبرات" aria-label="الخبرات">5</a>
+<a class="nav-btn" href="#slide-development-courses" title="التطوير" aria-label="التطوير">6</a>
+<a class="nav-btn" href="#slide4" title="التدريب" aria-label="التدريب">7</a>
+<a class="nav-btn" href="#slide5" title="فرقان" aria-label="فرقان">8</a>
+<a class="nav-btn" href="#slide6" title="التطوع" aria-label="التطوع">9</a>
+<a class="nav-btn" href="#slide7" title="المبادرات" aria-label="المبادرات">10</a>
+<a class="nav-btn" href="#slide-program-design" title="أفكار وتصميم البرامج" aria-label="أفكار وتصميم البرامج">11</a>
+<a class="nav-btn" href="#slide8" title="الآراء" aria-label="الآراء">12</a>
+<a class="nav-btn" href="#slide9" title="التواصل" aria-label="التواصل">13</a>
+<a class="nav-btn" href="#slide10" title="الخاتمة" aria-label="الخاتمة">14</a>
 </div>
 <div class="slides-wrapper">
 <!-- الشريحة 1: الواجهة الرئيسية -->
@@ -2160,6 +2178,20 @@ i, .fa, .fas, .fa-solid,
 </div>
 </div>
 </div>
+
+<div class="slide-container" id="slide-program-design">
+<h2 class="slide-title">أفكار وتصميم البرامج</h2>
+<div class="content-area">
+<p class="program-intro">أبتكر وأصمّم برامج تربوية وقرآنية ومنصات رقمية، وأطوّر لها المحتوى والأدلة والأنشطة والوسائل البصرية؛ لتحويل الفكرة إلى تجربة منظمة قابلة للتطبيق.</p>
+<div class="portfolio-grid program-feature-grid"><div class="card"><h3>آفاق كونية | من البذرة إلى المجرّة</h3><p>برنامج قرآني تربوي تفاعلي لأطفال التمهيدي، يربط الآيات بالتجربة الحسية والتفكّر، ويشمل ثماني محطات وحقيبة للمعلمة ولوحة «كوننا الصغير».</p></div><div class="card"><h3>غرس</h3><p>برنامج تربوي للتمهيدي يهدف إلى غرس الأخلاق والقيم، من خلال دليل عمل وأنشطة وبطاقات وحقيبة للمعلمات.</p></div><div class="card"><h3>مِحراب</h3><p>منصة رقمية موحّدة لإدارة ومتابعة حلقات الجوامع وقياس مؤشرات الأداء، تشمل التسجيل الذاتي والمتابعة عن بُعد.</p></div><div class="card"><h3>رحلة إلى القرآن</h3><p>من أعمالي في أفكار وتصميم البرامج القرآنية.</p></div></div>
+<h3 class="program-group-title">البرامج التربوية والقرآنية</h3>
+<ul class="program-tags"><li>نور وبصيرة</li><li>خُطى</li><li>ثَبْت</li><li>خطوتي</li><li>أثر</li><li>وصل</li><li>رفيق</li><li>مَعِين</li><li>جِسر</li><li>مدينة القرآن</li><li>نور البيان</li><li>الألفة</li><li>صحابي وقصة</li><li>إحياء سنة</li></ul>
+<h3 class="program-group-title">المنصات والحلول الرقمية</h3>
+<div class="portfolio-grid program-feature-grid"><div class="card"><h3>مِداد</h3><p>منصة تجمع البرامج القرآنية والأفكار التطويرية والحلول الإدارية.</p></div><div class="card"><h3>سِجل</h3><p>منصة لإدارة بيانات الدارسات ومتابعتها.</p></div><div class="card"><h3>الأرشيف الذكي</h3><p>حل رقمي لتنظيم ملفات المركز وأرشفتها.</p></div><div class="card"><h3>انضباط</h3><p>منصة لمتابعة الانضباط والحضور.</p></div></div>
+<p class="program-credit">فكرة وتصميم وإخراج: أ/ تهاني القرشي</p>
+</div>
+</div>
+
 <!-- الشريحة 11 : نظام الآراء والتعليقات التلقائي والذكي -->
 <div class="slide-container" id="slide8">
 <h2 class="slide-title">💬 أصداء العطاء والآراء التفاعلية</h2>
